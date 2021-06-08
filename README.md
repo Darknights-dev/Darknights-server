@@ -11,6 +11,10 @@ Darknights 服务器，目前只实现中国大陆CN服务器
 
 如果您有好的想法或建议，或者想参与到开发中，欢迎提交[issue](https://github.com/Darknights-master/Darknights-server/issues)或[pull request](https://github.com/Darknights-master/Darknights-server/pulls)
 
+<strike>破解yj服务器 x </strike>
+
+<strike>自己建服务器 √ </strike>
+
 ## Deployment
 
 ### requirements
