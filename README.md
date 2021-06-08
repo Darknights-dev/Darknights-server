@@ -42,6 +42,8 @@ Shell下python cytokinesis.py即可
 
 项目icon系作者手搓, inspired by [Texas](https://www.pixiv.net/artworks/87060370)
 
+本Project与 **上海鹰角网络科技有限公司(HYPERGRYPH)** 及其旗下手游 **明日方舟(Arknights)** 无任何直接或间接的关联
+
 ## Contributors
 
 [![contributors](https://contributors-img.web.app/image?repo=Darknights-master/Darknights-server)](https://github.com/Darknights-master/Darknights-server/graphs/contributors)
