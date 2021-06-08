@@ -15,6 +15,8 @@ Darknights 服务器，目前只实现中国大陆CN服务器
 
 <strike>自己建服务器 √ </strike>
 
+[开发讨论Discord](https://discord.gg/SmuB88RR5W)
+
 ## Deployment
 
 ### requirements
