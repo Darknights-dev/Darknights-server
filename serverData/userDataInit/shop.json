@@ -1,0 +1,1200 @@
+{
+    "LS": {
+        "curShopId": "lggShdShopnumber25",
+        "curGroupId": "lggShdShopnumber25_Group_1",
+        "info": []
+    },
+    "HS": {
+        "curShopId": "",
+        "info": [
+            {
+                "id": "HS_1041",
+                "count": 1
+            }
+        ],
+        "progressInfo": {
+            "AAA3": {
+                "count": 0,
+                "order": 4
+            },
+            "AAA4": {
+                "count": 0,
+                "order": 3
+            },
+            "AAA5": {
+                "count": 0,
+                "order": 3
+            },
+            "AAA6": {
+                "count": 0,
+                "order": 2
+            },
+            "AAA8": {
+                "count": 0,
+                "order": 2
+            },
+            "AAA12": {
+                "count": 0,
+                "order": 2
+            },
+            "AAA18": {
+                "count": 1,
+                "order": 5
+            },
+            "AAA21": {
+                "count": 0,
+                "order": 3
+            }
+        }
+    },
+    "ES": {
+        "curShopId": "xShdShopnumber2",
+        "info": [
+            {
+                "id": "ES_xShdShopnumber2_2",
+                "count": 1
+            }
+        ]
+    },
+    "CASH": {
+        "info": []
+    },
+    "GP": {
+        "oneTime": {
+            "info": [
+                {
+                    "id": "GP_Once_19",
+                    "count": 1
+                }
+            ]
+        },
+        "level": {
+            "info": [
+                {
+                    "id": "GP_freeL_5",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_10",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_15",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_20",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_25",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_30",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_35",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_40",
+                    "count": 1
+                },
+                {
+                    "id": "GP_freeL_45",
+                    "count": 1
+                }
+            ]
+        },
+        "weekly": {
+            "curGroupId": "gW_114",
+            "info": []
+        },
+        "monthly": {
+            "curGroupId": "gM_30",
+            "info": []
+        }
+    },
+    "FURNI": {
+        "info": [
+            {
+                "id": "activity_1",
+                "count": 1
+            },
+            {
+                "id": "activity_10",
+                "count": 1
+            },
+            {
+                "id": "activity_11",
+                "count": 1
+            },
+            {
+                "id": "activity_12",
+                "count": 1
+            },
+            {
+                "id": "activity_13",
+                "count": 2
+            },
+            {
+                "id": "activity_14",
+                "count": 1
+            },
+            {
+                "id": "activity_15",
+                "count": 1
+            },
+            {
+                "id": "activity_16",
+                "count": 1
+            },
+            {
+                "id": "activity_17",
+                "count": 1
+            },
+            {
+                "id": "activity_18",
+                "count": 1
+            },
+            {
+                "id": "activity_19",
+                "count": 1
+            },
+            {
+                "id": "activity_2",
+                "count": 1
+            },
+            {
+                "id": "activity_20",
+                "count": 1
+            },
+            {
+                "id": "activity_21",
+                "count": 1
+            },
+            {
+                "id": "activity_3",
+                "count": 1
+            },
+            {
+                "id": "activity_4",
+                "count": 1
+            },
+            {
+                "id": "activity_5",
+                "count": 1
+            },
+            {
+                "id": "activity_6",
+                "count": 1
+            },
+            {
+                "id": "activity_7",
+                "count": 1
+            },
+            {
+                "id": "activity_8",
+                "count": 1
+            },
+            {
+                "id": "activity_9",
+                "count": 1
+            },
+            {
+                "id": "s1_01_1",
+                "count": 0
+            },
+            {
+                "id": "s1_01_2",
+                "count": 0
+            },
+            {
+                "id": "s1_01_3",
+                "count": 0
+            },
+            {
+                "id": "s1_01_4",
+                "count": 0
+            },
+            {
+                "id": "s1_01_5",
+                "count": 0
+            },
+            {
+                "id": "s1_01_6",
+                "count": 0
+            },
+            {
+                "id": "s1_01_7",
+                "count": 0
+            },
+            {
+                "id": "s1_01_8",
+                "count": 0
+            },
+            {
+                "id": "s1_01_9",
+                "count": 0
+            },
+            {
+                "id": "s1_01_10",
+                "count": 0
+            },
+            {
+                "id": "s1_01_11",
+                "count": 0
+            },
+            {
+                "id": "s1_01_12",
+                "count": 0
+            },
+            {
+                "id": "s1_01_13",
+                "count": 0
+            },
+            {
+                "id": "s1_01_14",
+                "count": 0
+            },
+            {
+                "id": "s1_01_15",
+                "count": 0
+            },
+            {
+                "id": "s1_02_1",
+                "count": 0
+            },
+            {
+                "id": "s1_02_2",
+                "count": 0
+            },
+            {
+                "id": "s1_02_3",
+                "count": 0
+            },
+            {
+                "id": "s1_02_4",
+                "count": 0
+            },
+            {
+                "id": "s1_02_5",
+                "count": 0
+            },
+            {
+                "id": "s1_02_6",
+                "count": 0
+            },
+            {
+                "id": "s1_02_7",
+                "count": 0
+            },
+            {
+                "id": "s1_02_8",
+                "count": 0
+            },
+            {
+                "id": "s1_02_9",
+                "count": 0
+            },
+            {
+                "id": "s1_02_10",
+                "count": 0
+            },
+            {
+                "id": "s1_02_11",
+                "count": 0
+            },
+            {
+                "id": "s1_02_12",
+                "count": 0
+            },
+            {
+                "id": "s1_02_13",
+                "count": 0
+            },
+            {
+                "id": "s1_02_14",
+                "count": 0
+            },
+            {
+                "id": "s1_02_15",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_1",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_2",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_3",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_4",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_5",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_6",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_7",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_8",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_9",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_10",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_11",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_12",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_13",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_14",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_15",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_16",
+                "count": 0
+            },
+            {
+                "id": "specimen_01_17",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_1",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_2",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_3",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_4",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_5",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_6",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_7",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_8",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_9",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_10",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_11",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_12",
+                "count": 0
+            },
+            {
+                "id": "cabin_01_13",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_1",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_2",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_3",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_4",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_5",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_6",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_7",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_8",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_9",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_10",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_11",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_12",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_13",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_14",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_15",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_16",
+                "count": 0
+            },
+            {
+                "id": "cafe_01_17",
+                "count": 0
+            },
+            {
+                "id": "s2_01_1",
+                "count": 0
+            },
+            {
+                "id": "s2_01_2",
+                "count": 0
+            },
+            {
+                "id": "s2_01_3",
+                "count": 0
+            },
+            {
+                "id": "s2_01_4",
+                "count": 0
+            },
+            {
+                "id": "s2_01_5",
+                "count": 0
+            },
+            {
+                "id": "s2_01_6",
+                "count": 0
+            },
+            {
+                "id": "s2_01_7",
+                "count": 0
+            },
+            {
+                "id": "s2_01_8",
+                "count": 0
+            },
+            {
+                "id": "s2_01_9",
+                "count": 0
+            },
+            {
+                "id": "s2_01_10",
+                "count": 0
+            },
+            {
+                "id": "s2_01_11",
+                "count": 0
+            },
+            {
+                "id": "s2_01_12",
+                "count": 0
+            },
+            {
+                "id": "s2_01_13",
+                "count": 0
+            },
+            {
+                "id": "s2_01_14",
+                "count": 0
+            },
+            {
+                "id": "s2_01_15",
+                "count": 0
+            },
+            {
+                "id": "s2_02_1",
+                "count": 0
+            },
+            {
+                "id": "s2_02_2",
+                "count": 0
+            },
+            {
+                "id": "s2_02_3",
+                "count": 0
+            },
+            {
+                "id": "s2_02_4",
+                "count": 0
+            },
+            {
+                "id": "s2_02_5",
+                "count": 0
+            },
+            {
+                "id": "s2_02_6",
+                "count": 0
+            },
+            {
+                "id": "s2_02_7",
+                "count": 0
+            },
+            {
+                "id": "s2_02_8",
+                "count": 0
+            },
+            {
+                "id": "s2_02_9",
+                "count": 0
+            },
+            {
+                "id": "s2_02_10",
+                "count": 0
+            },
+            {
+                "id": "s2_02_11",
+                "count": 0
+            },
+            {
+                "id": "s2_02_12",
+                "count": 0
+            },
+            {
+                "id": "s2_02_13",
+                "count": 0
+            },
+            {
+                "id": "s2_02_14",
+                "count": 0
+            },
+            {
+                "id": "s2_02_15",
+                "count": 0
+            },
+            {
+                "id": "wooden_1",
+                "count": 0
+            },
+            {
+                "id": "wooden_2",
+                "count": 0
+            },
+            {
+                "id": "wooden_3",
+                "count": 0
+            },
+            {
+                "id": "wooden_4",
+                "count": 0
+            },
+            {
+                "id": "wooden_5",
+                "count": 0
+            },
+            {
+                "id": "wooden_6",
+                "count": 0
+            },
+            {
+                "id": "wooden_7",
+                "count": 0
+            },
+            {
+                "id": "wooden_8",
+                "count": 0
+            },
+            {
+                "id": "wooden_9",
+                "count": 0
+            },
+            {
+                "id": "wooden_10",
+                "count": 0
+            },
+            {
+                "id": "wooden_11",
+                "count": 0
+            },
+            {
+                "id": "wooden_12",
+                "count": 0
+            },
+            {
+                "id": "wooden_13",
+                "count": 0
+            },
+            {
+                "id": "wooden_14",
+                "count": 0
+            },
+            {
+                "id": "wooden_15",
+                "count": 0
+            },
+            {
+                "id": "wooden_16",
+                "count": 0
+            },
+            {
+                "id": "artdeco_1",
+                "count": 0
+            },
+            {
+                "id": "artdeco_2",
+                "count": 0
+            },
+            {
+                "id": "artdeco_3",
+                "count": 0
+            },
+            {
+                "id": "artdeco_4",
+                "count": 0
+            },
+            {
+                "id": "artdeco_5",
+                "count": 0
+            },
+            {
+                "id": "artdeco_6",
+                "count": 0
+            },
+            {
+                "id": "artdeco_7",
+                "count": 0
+            },
+            {
+                "id": "artdeco_8",
+                "count": 0
+            },
+            {
+                "id": "artdeco_9",
+                "count": 0
+            },
+            {
+                "id": "artdeco_10",
+                "count": 0
+            },
+            {
+                "id": "artdeco_11",
+                "count": 0
+            },
+            {
+                "id": "artdeco_12",
+                "count": 0
+            },
+            {
+                "id": "artdeco_13",
+                "count": 0
+            },
+            {
+                "id": "artdeco_14",
+                "count": 0
+            },
+            {
+                "id": "artdeco_15",
+                "count": 0
+            },
+            {
+                "id": "artdeco_16",
+                "count": 0
+            },
+            {
+                "id": "artdeco_17",
+                "count": 0
+            },
+            {
+                "id": "artdeco_18",
+                "count": 0
+            },
+            {
+                "id": "rococo_1",
+                "count": 0
+            },
+            {
+                "id": "rococo_2",
+                "count": 0
+            },
+            {
+                "id": "rococo_3",
+                "count": 0
+            },
+            {
+                "id": "rococo_4",
+                "count": 0
+            },
+            {
+                "id": "rococo_5",
+                "count": 0
+            },
+            {
+                "id": "rococo_6",
+                "count": 0
+            },
+            {
+                "id": "rococo_7",
+                "count": 0
+            },
+            {
+                "id": "rococo_8",
+                "count": 0
+            },
+            {
+                "id": "rococo_9",
+                "count": 0
+            },
+            {
+                "id": "rococo_10",
+                "count": 0
+            },
+            {
+                "id": "rococo_11",
+                "count": 0
+            },
+            {
+                "id": "rococo_12",
+                "count": 0
+            },
+            {
+                "id": "rococo_13",
+                "count": 0
+            },
+            {
+                "id": "rococo_14",
+                "count": 0
+            },
+            {
+                "id": "rococo_15",
+                "count": 0
+            },
+            {
+                "id": "rococo_16",
+                "count": 0
+            },
+            {
+                "id": "rococo_17",
+                "count": 0
+            },
+            {
+                "id": "rococo_18",
+                "count": 0
+            },
+            {
+                "id": "lightFood_1",
+                "count": 0
+            },
+            {
+                "id": "lightFood_2",
+                "count": 0
+            },
+            {
+                "id": "lightFood_3",
+                "count": 0
+            },
+            {
+                "id": "lightFood_4",
+                "count": 0
+            },
+            {
+                "id": "lightFood_5",
+                "count": 0
+            },
+            {
+                "id": "lightFood_6",
+                "count": 0
+            },
+            {
+                "id": "lightFood_7",
+                "count": 0
+            },
+            {
+                "id": "lightFood_8",
+                "count": 0
+            },
+            {
+                "id": "lightFood_9",
+                "count": 0
+            },
+            {
+                "id": "lightFood_10",
+                "count": 0
+            },
+            {
+                "id": "lightFood_11",
+                "count": 0
+            },
+            {
+                "id": "lightFood_12",
+                "count": 0
+            },
+            {
+                "id": "lightFood_13",
+                "count": 0
+            },
+            {
+                "id": "lightFood_14",
+                "count": 0
+            },
+            {
+                "id": "lightFood_15",
+                "count": 0
+            },
+            {
+                "id": "lightFood_16",
+                "count": 0
+            },
+            {
+                "id": "lightFood_17",
+                "count": 0
+            },
+            {
+                "id": "lightFood_18",
+                "count": 0
+            },
+            {
+                "id": "village_15",
+                "count": 0
+            },
+            {
+                "id": "village_16",
+                "count": 0
+            },
+            {
+                "id": "village_1",
+                "count": 0
+            },
+            {
+                "id": "village_2",
+                "count": 0
+            },
+            {
+                "id": "village_3",
+                "count": 0
+            },
+            {
+                "id": "village_4",
+                "count": 0
+            },
+            {
+                "id": "village_5",
+                "count": 0
+            },
+            {
+                "id": "village_6",
+                "count": 0
+            },
+            {
+                "id": "village_7",
+                "count": 0
+            },
+            {
+                "id": "village_8",
+                "count": 0
+            },
+            {
+                "id": "village_9",
+                "count": 0
+            },
+            {
+                "id": "village_10",
+                "count": 0
+            },
+            {
+                "id": "village_11",
+                "count": 0
+            },
+            {
+                "id": "village_12",
+                "count": 0
+            },
+            {
+                "id": "village_13",
+                "count": 0
+            },
+            {
+                "id": "village_14",
+                "count": 0
+            },
+            {
+                "id": "single_8",
+                "count": 0
+            },
+            {
+                "id": "single_3",
+                "count": 0
+            },
+            {
+                "id": "single_4",
+                "count": 0
+            },
+            {
+                "id": "single_5",
+                "count": 0
+            },
+            {
+                "id": "single_2",
+                "count": 0
+            },
+            {
+                "id": "single_6",
+                "count": 0
+            },
+            {
+                "id": "single_9",
+                "count": 0
+            },
+            {
+                "id": "single_1",
+                "count": 0
+            },
+            {
+                "id": "single_11",
+                "count": 0
+            },
+            {
+                "id": "single_10",
+                "count": 0
+            },
+            {
+                "id": "single_7",
+                "count": 0
+            },
+            {
+                "id": "inkArt_5",
+                "count": 0
+            },
+            {
+                "id": "inkArt_3",
+                "count": 0
+            },
+            {
+                "id": "inkArt_4",
+                "count": 0
+            },
+            {
+                "id": "inkArt_2",
+                "count": 0
+            },
+            {
+                "id": "inkArt_1",
+                "count": 0
+            },
+            {
+                "id": "inkArt_6",
+                "count": 0
+            },
+            {
+                "id": "office_15",
+                "count": 0
+            },
+            {
+                "id": "office_16",
+                "count": 0
+            },
+            {
+                "id": "office_1",
+                "count": 0
+            },
+            {
+                "id": "office_2",
+                "count": 0
+            },
+            {
+                "id": "office_3",
+                "count": 0
+            },
+            {
+                "id": "office_4",
+                "count": 0
+            },
+            {
+                "id": "office_6",
+                "count": 0
+            },
+            {
+                "id": "office_7",
+                "count": 0
+            },
+            {
+                "id": "office_5",
+                "count": 0
+            },
+            {
+                "id": "office_8",
+                "count": 0
+            },
+            {
+                "id": "office_11",
+                "count": 0
+            },
+            {
+                "id": "office_12",
+                "count": 0
+            },
+            {
+                "id": "office_13",
+                "count": 0
+            },
+            {
+                "id": "office_14",
+                "count": 0
+            },
+            {
+                "id": "office_9",
+                "count": 0
+            },
+            {
+                "id": "office_10",
+                "count": 0
+            },
+            {
+                "id": "beerhouse_1",
+                "count": 0
+            },
+            {
+                "id": "beerhouse_2",
+                "count": 0
+            },
+            {
+                "id": "beerhouse_3",
+                "count": 0
+            },
+            {
+                "id": "beerhouse_4",
+                "count": 0
+            },
+            {
+                "id": "abyssal_1",
+                "count": 0
+            },
+            {
+                "id": "abyssal_2",
+                "count": 0
+            },
+            {
+                "id": "abyssal_3",
+                "count": 0
+            },
+            {
+                "id": "abyssal_4",
+                "count": 0
+            },
+            {
+                "id": "abyssal_5",
+                "count": 0
+            }
+        ],
+        "groupInfo": {
+            "activity_2020": 1
+        }
+    },
+    "SOCIAL": {
+        "curShopId": "SOCIAL20210501",
+        "info": [
+            {
+                "id": "SOCIAL20210501_T2_gold_1_2",
+                "count": 1
+            },
+            {
+                "id": "SOCIAL20210501_T2_goods_20_5",
+                "count": 1
+            },
+            {
+                "id": "SOCIAL20210501_T2_goods_20_4",
+                "count": 1
+            }
+        ],
+        "charPurchase": {
+            "char_198_blackd": 2,
+            "char_187_ccheal": 2
+        }
+    },
+    "LMTGS": {
+        "info": [
+            {
+                "id": "LIMITED_14_0_1_2",
+                "count": 1
+            }
+        ]
+    },
+    "EPGS": {
+        "info": [
+            {
+                "id": "good_EPGS_8",
+                "count": 5
+            },
+            {
+                "id": "good_EPGS_3",
+                "count": 2
+            },
+            {
+                "id": "good_EPGS_4",
+                "count": 2
+            },
+            {
+                "id": "good_EPGS_5",
+                "count": 2
+            }
+        ]
+    }
+}

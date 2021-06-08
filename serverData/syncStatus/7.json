@@ -1,0 +1,22 @@
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "pushFlags": {
+                "hasFriendRequest": 0,
+                "hasGifts": 0
+            },
+            "status": {
+                "lastOnlineTs": 1623155523,
+                "resume": "相关功能优化中，签名暂无法保存，请等待后续开放。（修改任务不受影响）"
+            }
+        }
+    },
+    "result": {
+        "4": {
+            "announcementPopUpVersion": "1058",
+            "announcementVersion": "535"
+        }
+    },
+    "ts": 1623155575
+}

@@ -1,0 +1,13 @@
+{
+    "ts":0,
+    "result":{},
+    "playerDataDelta":{
+        "modified":{
+            "status":{
+                "lastOnlineTs":0
+            },
+            "activity":{
+            }
+        }
+    }
+}

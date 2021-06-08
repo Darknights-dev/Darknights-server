@@ -1,0 +1,58 @@
+{
+    "goodList": [
+        {
+            "desc": "开采源石",
+            "diamondNum": 1,
+            "doubleCount": 3,
+            "goodId": "CS_1_r1",
+            "plusNum": 0,
+            "price": 0,
+            "slotId": 1
+        },
+        {
+            "desc": "开采一组源石",
+            "diamondNum": 6,
+            "doubleCount": 12,
+            "goodId": "CS_2_r1",
+            "plusNum": 1,
+            "price": 0,
+            "slotId": 2
+        },
+        {
+            "desc": "开采一堆源石",
+            "diamondNum": 20,
+            "doubleCount": 40,
+            "goodId": "CS_3_r1",
+            "plusNum": 4,
+            "price": 0,
+            "slotId": 3
+        },
+        {
+            "desc": "开采一袋源石",
+            "diamondNum": 40,
+            "doubleCount": 80,
+            "goodId": "CS_4_r1",
+            "plusNum": 10,
+            "price": 0,
+            "slotId": 4
+        },
+        {
+            "desc": "开采一盒源石",
+            "diamondNum": 66,
+            "doubleCount": 132,
+            "goodId": "CS_5_r1",
+            "plusNum": 24,
+            "price": 0,
+            "slotId": 5
+        },
+        {
+            "desc": "开采一箱源石",
+            "diamondNum": 130,
+            "doubleCount": 260,
+            "goodId": "CS_6_r1",
+            "plusNum": 55,
+            "price":0,
+            "slotId": 6
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "carousel": {
+                "furnitureShop": {
+                    "goods": {},
+                    "groups": {}
+                }
+            },
+            "pushFlags": {
+                "hasClues": 0,
+                "hasFriendRequest": 0,
+                "hasGifts": 1
+            },
+            "status": {
+                "lastOnlineTs": 1623695743,
+                "resume": "相关功能优化中，签名暂无法保存，请等待后续开放。（修改任务不受影响）"
+            }
+        }
+    },
+    "result": {
+        "16": {
+            "goodPurchaseState": {
+                "result": {
+                    "GP_Once_1": 1,
+                    "GP_Once_19": 1,
+                    "GP_Once_21": 1,
+                    "GP_Once_22": 1,
+                    "GP_Once_23": 1,
+                    "GP_Once_24": 1
+                }
+            }
+        },
+        "4": {
+            "announcementPopUpVersion": "1065",
+            "announcementVersion": "536"
+        }
+    },
+    "ts": 1623695743
+}

@@ -1,0 +1,20 @@
+{
+    "character": {
+        "char_002_amiya": {
+            "charInstId": 1,
+            "count": 1
+        },
+        "char_502_nblade": {
+            "charInstId": 2,
+            "count": 1
+        },
+        "char_500_noirc": {
+            "charInstId": 3,
+            "count": 1
+        },
+        "char_503_rang": {
+            "charInstId": 4,
+            "count": 1
+        }
+    }
+}

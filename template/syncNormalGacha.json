@@ -1,0 +1,97 @@
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "recruit": {
+                "normal": {
+                    "slots": {
+                        "0": {
+                            "durationInSec": 28800,
+                            "maxFinishTs": 1616325606,
+                            "realFinishTs": 1616325606,
+                            "selectTags": [
+                                {
+                                    "pick": 1,
+                                    "tagId": 8
+                                },
+                                {
+                                    "pick": 1,
+                                    "tagId": 19
+                                }
+                            ],
+                            "startTs": 1623296806,
+                            "state": 2,
+                            "tags": [
+                                2,
+                                4,
+                                1,
+                                6,
+                                17
+                            ]
+                        },
+                        "1": {
+                            "durationInSec": 21600,
+                            "maxFinishTs": 1623318394,
+                            "realFinishTs": 1612318394,
+                            "selectTags": [
+                                {
+                                    "pick": 1,
+                                    "tagId": 6
+                                }
+                            ],
+                            "startTs": 1626296794,
+                            "state": 2,
+                            "tags": [
+                                3,
+                                4,
+                                6,
+                                10,
+                                22
+                            ]
+                        },
+                        "2": {
+                            "durationInSec": 32400,
+                            "maxFinishTs": 1616233211,
+                            "realFinishTs": 1612329211,
+                            "selectTags": [
+                                {
+                                    "pick": 1,
+                                    "tagId": 2
+                                }
+                            ],
+                            "startTs": 1616236811,
+                            "state": 2,
+                            "tags": [
+                                2,
+                                4,
+                                7,
+                                17,
+                                19
+                            ]
+                        },
+                        "3": {
+                            "durationInSec": 32400,
+                            "maxFinishTs": 1626329218,
+                            "realFinishTs": 1612329218,
+                            "selectTags": [
+                                {
+                                    "pick": 1,
+                                    "tagId": 1
+                                }
+                            ],
+                            "startTs": 1612396818,
+                            "state": 2,
+                            "tags": [
+                                2,
+                                4,
+                                6,
+                                8,
+                                21
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

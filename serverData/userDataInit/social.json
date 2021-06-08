@@ -1,0 +1,21 @@
+{
+    "assistCharList": [
+        {
+            "charInstId": 1,
+            "skillIndex": 1
+        }
+    ],
+    "yesterdayReward": {
+        "canReceive": 1,
+        "assistAmount": 0,
+        "comfortAmount": 0,
+        "first": 0
+    },
+    "yCrisisSs": "",
+    "medalBoard": {
+        "type": "CUSTOM",
+        "custom": "1",
+        "template": null,
+        "templateMedalList": null
+    }
+}

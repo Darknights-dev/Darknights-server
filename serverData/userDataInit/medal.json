@@ -1,0 +1,63 @@
+{
+    "medals": {
+        "medal_player_charnum_01": {
+            "id": "medal_player_charnum_01",
+            "val": [
+                [
+                    4,
+                    30
+                ]
+            ],
+            "fts": -1,
+            "rts": -1
+        },
+        "medal_player_charnum_02": {
+            "id": "medal_player_charnum_02",
+            "val": [
+                [
+                    4,
+                    60
+                ]
+            ],
+            "fts": -1,
+            "rts": -1
+        },
+        "medal_player_charnum_03": {
+            "id": "medal_player_charnum_03",
+            "val": [
+                [
+                    4,
+                    90
+                ]
+            ],
+            "fts": -1,
+            "rts": -1
+        },
+        "medal_player_charnum_04": {
+            "id": "medal_player_charnum_04",
+            "val": [
+                [
+                    4,
+                    130
+                ]
+            ],
+            "fts": -1,
+            "rts": -1
+        },
+        "medal_player_charnum_05": {
+            "id": "medal_player_charnum_05",
+            "val": [
+                [
+                    4,
+                    160
+                ]
+            ],
+            "fts": -1,
+            "rts": -1
+        }
+    },
+    "custom": {
+        "currentIndex": null,
+        "customs": {}
+    }
+}

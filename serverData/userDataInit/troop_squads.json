@@ -1,0 +1,45 @@
+{
+    "0": {
+        "squadId": "0",
+        "name": "第一编队",
+        "slots": [
+            {
+                "charInstId": 1,
+                "skillIndex": 0
+            },
+            {
+                "charInstId": 2,
+                "skillIndex": -1
+            },
+            {
+                "charInstId": 3,
+                "skillIndex": -1
+            },
+            {
+                "charInstId": 4,
+                "skillIndex": -1
+            }
+        ]
+    },
+    "1": {
+        "squadId": "1",
+        "name": "第二编队",
+        "slots": [
+
+        ]
+    },
+    "2": {
+        "squadId": "2",
+        "name": "第三编队",
+        "slots": [
+
+        ]
+    },
+    "3": {
+        "squadId": "3",
+        "name": "第四编队",
+        "slots": [
+
+        ]
+    }
+}

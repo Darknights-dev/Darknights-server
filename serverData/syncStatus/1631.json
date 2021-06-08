@@ -1,0 +1,2592 @@
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "carousel": {
+                "furnitureShop": {
+                    "goods": {},
+                    "groups": {}
+                }
+            },
+            "medal": {
+                "medals": {
+                    "medal_activity_10d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_10d0_02": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_03": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_035": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_035",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_04": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_05": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_06": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_07": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_08": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_09": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d0_10": {
+                        "fts": -1,
+                        "id": "medal_activity_10d0_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                5
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_10d5_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                7
+                            ]
+                        ]
+                    },
+                    "medal_activity_10d5_02": {
+                        "fts": -1,
+                        "id": "medal_activity_10d5_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_11d0_02": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_03": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_04": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                2
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_05": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_06": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_07": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_075": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_075",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_08": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_09": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4000
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_10": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d0_11": {
+                        "fts": -1,
+                        "id": "medal_activity_11d0_11",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                30
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_11d5_02": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_03": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_035": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_035",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_04": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_05": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_06": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_07": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_08": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_09": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_11d5_10": {
+                        "fts": -1,
+                        "id": "medal_activity_11d5_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                5
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_02": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_03": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4000
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_04": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                9
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_05": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_06": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_07": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                25
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_08": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_085": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_085",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_09": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_12d0_10": {
+                        "fts": -1,
+                        "id": "medal_activity_12d0_10",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_13d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_13d0_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                7
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d0_02": {
+                        "fts": -1,
+                        "id": "medal_activity_13d0_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_13d5_02": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d5_03": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d5_04": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_04",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_13d5_045": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_045",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_13d5_05": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_05",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_13d5_06": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d5_07": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                25
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d5_08": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                15
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d5_09": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_13d5_10": {
+                        "fts": -1,
+                        "id": "medal_activity_13d5_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4000
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_14d5_02": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_03": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_035": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_035",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_04": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_05": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_06": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_07": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_08": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_09": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_14d5_10": {
+                        "fts": -1,
+                        "id": "medal_activity_14d5_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                5
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_15d0_02": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_03": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_04": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4000
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_05": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                25
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_06": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_07": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_08": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_09": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_10": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d0_105": {
+                        "fts": -1,
+                        "id": "medal_activity_15d0_105",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_15d5_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                7
+                            ]
+                        ]
+                    },
+                    "medal_activity_15d5_02": {
+                        "fts": -1,
+                        "id": "medal_activity_15d5_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_16d0_02": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_03": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_035": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_035",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_04": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_05": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_06": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_07": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_08": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_09": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d0_10": {
+                        "fts": -1,
+                        "id": "medal_activity_16d0_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                5
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_16d5_02": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                300
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d5_03": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d5_04": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_04",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_16d5_045": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_045",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_16d5_05": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_05",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_16d5_06": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_06",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_16d5_07": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d5_08": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                29
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d5_09": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_16d5_10": {
+                        "fts": -1,
+                        "id": "medal_activity_16d5_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4000
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_18d0_02": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_03": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_04": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4000
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_05": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                24
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_06": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_07": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_07",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_18d0_08": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_09": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_10": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d0_105": {
+                        "fts": -1,
+                        "id": "medal_activity_18d0_105",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_01": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_18d3_02": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_03": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_04": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4000
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_05": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                26
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_06": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                9
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_07": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_08": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_09": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_10": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d3_105": {
+                        "fts": -1,
+                        "id": "medal_activity_18d3_105",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_activity_18d5_02": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_03": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_035": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_035",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_04": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_05": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_06": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_07": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                8
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_08": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_09": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_activity_18d5_10": {
+                        "fts": -1,
+                        "id": "medal_activity_18d5_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                5
+                            ]
+                        ]
+                    },
+                    "medal_activity_4d0_01": {
+                        "fts": -1,
+                        "id": "medal_activity_4d0_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                7
+                            ]
+                        ]
+                    },
+                    "medal_activity_6d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_6d5_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                3
+                            ]
+                        ]
+                    },
+                    "medal_activity_7d5_01": {
+                        "fts": -1,
+                        "id": "medal_activity_7d5_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                6
+                            ]
+                        ]
+                    },
+                    "medal_camp_diamondshd_01": {
+                        "fts": -1,
+                        "id": "medal_camp_diamondshd_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                1200,
+                                1800
+                            ]
+                        ]
+                    },
+                    "medal_camp_permanent_01": {
+                        "fts": -1,
+                        "id": "medal_camp_permanent_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_camp_permanent_02": {
+                        "fts": -1,
+                        "id": "medal_camp_permanent_02",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_camp_permanent_03": {
+                        "fts": -1,
+                        "id": "medal_camp_permanent_03",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_camp_rotate_01": {
+                        "fts": -1,
+                        "id": "medal_camp_rotate_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_camp_rotate_02": {
+                        "fts": -1,
+                        "id": "medal_camp_rotate_02",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_camp_rotate_03": {
+                        "fts": -1,
+                        "id": "medal_camp_rotate_03",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_camp_rotate_04": {
+                        "fts": -1,
+                        "id": "medal_camp_rotate_04",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_growth_char_01": {
+                        "fts": -1,
+                        "id": "medal_growth_char_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                3
+                            ]
+                        ]
+                    },
+                    "medal_growth_char_02": {
+                        "fts": -1,
+                        "id": "medal_growth_char_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                2
+                            ]
+                        ]
+                    },
+                    "medal_growth_char_03": {
+                        "fts": -1,
+                        "id": "medal_growth_char_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                2
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve1_01": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve1_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve1_02": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve1_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                20
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve1_03": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve1_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                50
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve1_04": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve1_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                80
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve1_05": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve1_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve2_01": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve2_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve2_02": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve2_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve2_03": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve2_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                25
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve2_04": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve2_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                40
+                            ]
+                        ]
+                    },
+                    "medal_growth_evolve2_05": {
+                        "fts": -1,
+                        "id": "medal_growth_evolve2_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                50
+                            ]
+                        ]
+                    },
+                    "medal_growth_favor_01": {
+                        "fts": -1,
+                        "id": "medal_growth_favor_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_growth_favor_02": {
+                        "fts": -1,
+                        "id": "medal_growth_favor_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                20
+                            ]
+                        ]
+                    },
+                    "medal_growth_favor_03": {
+                        "fts": -1,
+                        "id": "medal_growth_favor_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                50
+                            ]
+                        ]
+                    },
+                    "medal_growth_favor_04": {
+                        "fts": -1,
+                        "id": "medal_growth_favor_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_growth_favormax_01": {
+                        "fts": -1,
+                        "id": "medal_growth_favormax_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_growth_favormax_02": {
+                        "fts": -1,
+                        "id": "medal_growth_favormax_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                20
+                            ]
+                        ]
+                    },
+                    "medal_growth_favormax_03": {
+                        "fts": -1,
+                        "id": "medal_growth_favormax_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                40
+                            ]
+                        ]
+                    },
+                    "medal_growth_favormax_04": {
+                        "fts": -1,
+                        "id": "medal_growth_favormax_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                60
+                            ]
+                        ]
+                    },
+                    "medal_growth_potential_01": {
+                        "fts": -1,
+                        "id": "medal_growth_potential_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                3
+                            ]
+                        ]
+                    },
+                    "medal_growth_potential_02": {
+                        "fts": -1,
+                        "id": "medal_growth_potential_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                2
+                            ]
+                        ]
+                    },
+                    "medal_growth_potential_03": {
+                        "fts": -1,
+                        "id": "medal_growth_potential_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                2
+                            ]
+                        ]
+                    },
+                    "medal_growth_skill_01": {
+                        "fts": -1,
+                        "id": "medal_growth_skill_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_growth_skill_02": {
+                        "fts": -1,
+                        "id": "medal_growth_skill_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                25
+                            ]
+                        ]
+                    },
+                    "medal_growth_skill_03": {
+                        "fts": -1,
+                        "id": "medal_growth_skill_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                60
+                            ]
+                        ]
+                    },
+                    "medal_growth_skill_04": {
+                        "fts": -1,
+                        "id": "medal_growth_skill_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                75
+                            ]
+                        ]
+                    },
+                    "medal_growth_specskill_01": {
+                        "fts": -1,
+                        "id": "medal_growth_specskill_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_growth_specskill_02": {
+                        "fts": -1,
+                        "id": "medal_growth_specskill_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                5
+                            ]
+                        ]
+                    },
+                    "medal_growth_specskill_03": {
+                        "fts": -1,
+                        "id": "medal_growth_specskill_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_growth_specskill_04": {
+                        "fts": -1,
+                        "id": "medal_growth_specskill_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                15
+                            ]
+                        ]
+                    },
+                    "medal_player_charnum_01": {
+                        "fts": -1,
+                        "id": "medal_player_charnum_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                4,
+                                30
+                            ]
+                        ]
+                    },
+                    "medal_player_charnum_02": {
+                        "fts": -1,
+                        "id": "medal_player_charnum_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                4,
+                                60
+                            ]
+                        ]
+                    },
+                    "medal_player_charnum_03": {
+                        "fts": -1,
+                        "id": "medal_player_charnum_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                4,
+                                90
+                            ]
+                        ]
+                    },
+                    "medal_player_charnum_04": {
+                        "fts": -1,
+                        "id": "medal_player_charnum_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                4,
+                                130
+                            ]
+                        ]
+                    },
+                    "medal_player_charnum_05": {
+                        "fts": -1,
+                        "id": "medal_player_charnum_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                4,
+                                160
+                            ]
+                        ]
+                    },
+                    "medal_player_joingame_01": {
+                        "fts": -1,
+                        "id": "medal_player_joingame_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                1,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_player_joingame_02": {
+                        "fts": -1,
+                        "id": "medal_player_joingame_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                1,
+                                365
+                            ]
+                        ]
+                    },
+                    "medal_player_joingame_03": {
+                        "fts": -1,
+                        "id": "medal_player_joingame_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                1,
+                                730
+                            ]
+                        ]
+                    },
+                    "medal_player_lv_01": {
+                        "fts": -1,
+                        "id": "medal_player_lv_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                1,
+                                50
+                            ]
+                        ]
+                    },
+                    "medal_player_lv_02": {
+                        "fts": -1,
+                        "id": "medal_player_lv_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                1,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_player_lv_03": {
+                        "fts": -1,
+                        "id": "medal_player_lv_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                1,
+                                120
+                            ]
+                        ]
+                    },
+                    "medal_player_recruitcount_01": {
+                        "fts": -1,
+                        "id": "medal_player_recruitcount_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                30
+                            ]
+                        ]
+                    },
+                    "medal_player_recruitcount_02": {
+                        "fts": -1,
+                        "id": "medal_player_recruitcount_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                100
+                            ]
+                        ]
+                    },
+                    "medal_player_recruitcount_03": {
+                        "fts": -1,
+                        "id": "medal_player_recruitcount_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                300
+                            ]
+                        ]
+                    },
+                    "medal_player_recruitcount_04": {
+                        "fts": -1,
+                        "id": "medal_player_recruitcount_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                500
+                            ]
+                        ]
+                    },
+                    "medal_player_recruitcount_05": {
+                        "fts": -1,
+                        "id": "medal_player_recruitcount_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1000
+                            ]
+                        ]
+                    },
+                    "medal_player_recruitcount_06": {
+                        "fts": -1,
+                        "id": "medal_player_recruitcount_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1500
+                            ]
+                        ]
+                    },
+                    "medal_stage_complete_01": {
+                        "fts": -1,
+                        "id": "medal_stage_complete_01",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_stage_fourstar_01": {
+                        "fts": -1,
+                        "id": "medal_stage_fourstar_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                39
+                            ]
+                        ]
+                    },
+                    "medal_stage_fourstar_02": {
+                        "fts": -1,
+                        "id": "medal_stage_fourstar_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_stage_fourstar_03": {
+                        "fts": -1,
+                        "id": "medal_stage_fourstar_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                10
+                            ]
+                        ]
+                    },
+                    "medal_stage_fourstar_04": {
+                        "fts": -1,
+                        "id": "medal_stage_fourstar_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                13
+                            ]
+                        ]
+                    },
+                    "medal_stage_fourstar_05": {
+                        "fts": -1,
+                        "id": "medal_stage_fourstar_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                16
+                            ]
+                        ]
+                    },
+                    "medal_stage_fourstar_06": {
+                        "fts": -1,
+                        "id": "medal_stage_fourstar_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                16
+                            ]
+                        ]
+                    },
+                    "medal_stage_hard_01": {
+                        "fts": -1,
+                        "id": "medal_stage_hard_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_stage_hard_02": {
+                        "fts": -1,
+                        "id": "medal_stage_hard_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_stage_hard_03": {
+                        "fts": -1,
+                        "id": "medal_stage_hard_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_stage_hard_04": {
+                        "fts": -1,
+                        "id": "medal_stage_hard_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_01": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_02": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_03": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_03",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_04": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_04",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_05": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_05",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_06": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_06",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_07": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_07",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_08": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_08",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_09": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_09",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_normal_10": {
+                        "fts": -1,
+                        "id": "medal_stage_normal_10",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                1
+                            ]
+                        ]
+                    },
+                    "medal_stage_weekly_01": {
+                        "fts": -1,
+                        "id": "medal_stage_weekly_01",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                5
+                            ]
+                        ]
+                    },
+                    "medal_stage_weekly_02": {
+                        "fts": -1,
+                        "id": "medal_stage_weekly_02",
+                        "rts": -1,
+                        "val": [
+                            [
+                                0,
+                                4
+                            ]
+                        ]
+                    },
+                    "medal_story_12fce_1": {
+                        "fts": -1,
+                        "id": "medal_story_12fce_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_aglina_1": {
+                        "fts": -1,
+                        "id": "medal_story_aglina_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_amgoat_1": {
+                        "fts": -1,
+                        "id": "medal_story_amgoat_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_amgoat_2": {
+                        "fts": -1,
+                        "id": "medal_story_amgoat_2",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_angel_1": {
+                        "fts": -1,
+                        "id": "medal_story_angel_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_bldsk_1": {
+                        "fts": -1,
+                        "id": "medal_story_bldsk_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_broca_1": {
+                        "fts": -1,
+                        "id": "medal_story_broca_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_cerber_1": {
+                        "fts": -1,
+                        "id": "medal_story_cerber_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_cgbird_1": {
+                        "fts": -1,
+                        "id": "medal_story_cgbird_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_ethan_1": {
+                        "fts": -1,
+                        "id": "medal_story_ethan_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_f12yin_1": {
+                        "fts": -1,
+                        "id": "medal_story_f12yin_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_flower_1": {
+                        "fts": -1,
+                        "id": "medal_story_flower_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_fmout_1": {
+                        "fts": -1,
+                        "id": "medal_story_fmout_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_ghost_1": {
+                        "fts": -1,
+                        "id": "medal_story_ghost_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_helage_1": {
+                        "fts": -1,
+                        "id": "medal_story_helage_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_kroos_1": {
+                        "fts": -1,
+                        "id": "medal_story_kroos_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_lava_1": {
+                        "fts": -1,
+                        "id": "medal_story_lava_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_lava_2": {
+                        "fts": -1,
+                        "id": "medal_story_lava_2",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_liskam_1": {
+                        "fts": -1,
+                        "id": "medal_story_liskam_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_liskam_2": {
+                        "fts": -1,
+                        "id": "medal_story_liskam_2",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_medic2_1": {
+                        "fts": -1,
+                        "id": "medal_story_medic2_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_melan_1": {
+                        "fts": -1,
+                        "id": "medal_story_melan_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_milu_1": {
+                        "fts": -1,
+                        "id": "medal_story_milu_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_nights_1": {
+                        "fts": -1,
+                        "id": "medal_story_nights_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_noirc_1": {
+                        "fts": -1,
+                        "id": "medal_story_noirc_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_otter_1": {
+                        "fts": -1,
+                        "id": "medal_story_otter_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_phatom_1": {
+                        "fts": -1,
+                        "id": "medal_story_phatom_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_prove_1": {
+                        "fts": -1,
+                        "id": "medal_story_prove_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_rope_1": {
+                        "fts": -1,
+                        "id": "medal_story_rope_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_savage_1": {
+                        "fts": -1,
+                        "id": "medal_story_savage_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_savage_2": {
+                        "fts": -1,
+                        "id": "medal_story_savage_2",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_shwaz_1": {
+                        "fts": -1,
+                        "id": "medal_story_shwaz_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_sidero_1": {
+                        "fts": -1,
+                        "id": "medal_story_sidero_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_skgoat_1": {
+                        "fts": -1,
+                        "id": "medal_story_skgoat_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_texas_1": {
+                        "fts": -1,
+                        "id": "medal_story_texas_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_therex_1": {
+                        "fts": -1,
+                        "id": "medal_story_therex_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_tiger_1": {
+                        "fts": -1,
+                        "id": "medal_story_tiger_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_vigna_1": {
+                        "fts": -1,
+                        "id": "medal_story_vigna_1",
+                        "rts": -1,
+                        "val": []
+                    },
+                    "medal_story_yuki_1": {
+                        "fts": -1,
+                        "id": "medal_story_yuki_1",
+                        "rts": -1,
+                        "val": []
+                    }
+                }
+            },
+            "pushFlags": {
+                "hasClues": 0,
+                "hasFriendRequest": 0,
+                "hasGifts": 1
+            },
+            "shop": {
+                "ES": {
+                    "curShopId": "xShdShopnumber2",
+                    "info": []
+                },
+                "LS": {
+                    "curGroupId": "lggShdShopnumber25_Group_1",
+                    "curShopId": "lggShdShopnumber25",
+                    "info": []
+                }
+            },
+            "status": {
+                "lastOnlineTs": 1623694805,
+                "resume": "相关功能优化中，签名暂无法保存，请等待后续开放。（修改任务不受影响）"
+            }
+        }
+    },
+    "result": {
+        "16": {
+            "goodPurchaseState": {
+                "result": {
+                    "GP_Once_1": 1,
+                    "GP_Once_19": 1,
+                    "GP_Once_21": 1,
+                    "GP_Once_22": 1,
+                    "GP_Once_23": 1,
+                    "GP_Once_24": 1
+                }
+            }
+        },
+        "4": {
+            "announcementPopUpVersion": "1065",
+            "announcementVersion": "536"
+        }
+    },
+    "ts": 1623694806
+}

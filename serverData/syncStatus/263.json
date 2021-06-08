@@ -1,0 +1,527 @@
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "crisis": {
+                "box": [],
+                "current": "rune_season_5_1",
+                "lst": 1623154960,
+                "map": {
+                    "rune_01-01": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_01-02": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_01-03": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_02-01": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_02-02": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_02-03": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_02-04": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_02-05": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_03-01": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_03-02": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_04-01": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_05-01": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_05-02": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_06-01": {
+                        "confirmed": 0,
+                        "rank": 0
+                    },
+                    "rune_06-02": {
+                        "confirmed": 0,
+                        "rank": 0
+                    }
+                },
+                "nst": 1623195200,
+                "season": {
+                    "rune_season_2_1": {
+                        "coin": 0,
+                        "permanent": {
+                            "challenge": {
+                                "pointList": {
+                                    "1": -1,
+                                    "10": -1,
+                                    "11": -1,
+                                    "12": -1,
+                                    "13": -1,
+                                    "14": -1,
+                                    "15": -1,
+                                    "16": -1,
+                                    "17": -1,
+                                    "18": -1,
+                                    "2": -1,
+                                    "3": -1,
+                                    "4": -1,
+                                    "5": -1,
+                                    "6": -1,
+                                    "7": -1,
+                                    "8": -1,
+                                    "9": -1
+                                },
+                                "taskList": {
+                                    "normalTask_1": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_2": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_3": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_4": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_5": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_6": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    }
+                                },
+                                "topPoint": -1
+                            },
+                            "nst": 1396484800,
+                            "point": -1,
+                            "rune": {
+                                "char_atk_1": 1,
+                                "char_cost_casterspecial_1": 1,
+                                "char_cost_casterspecial_2": 0,
+                                "char_cost_sniperguard_1": 1,
+                                "char_cost_sniperguard_2": 0,
+                                "char_hp_1": 1,
+                                "char_hp_2": 0,
+                                "enemy_atk_1": 1,
+                                "enemy_atk_2": 0,
+                                "enemy_def_1": 1,
+                                "enemy_faust_atkmod_2": 0,
+                                "enemy_faust_atkmod_3": 0,
+                                "enemy_faust_trapmod_2": 0,
+                                "enemy_faust_trapmod_3": 0,
+                                "enemy_hp_2": 0,
+                                "enemy_hp_3": 0,
+                                "enemy_reveng_1": 1,
+                                "enemy_reveng_atkmod_2": 0,
+                                "enemy_reveng_atkmod_3": 0,
+                                "enemy_reveng_spdmod_2": 0,
+                                "enemy_reveng_spdmod_3": 0,
+                                "global_costrecovery_1": 1,
+                                "global_costrecovery_2": 0,
+                                "global_forbidloc_1": 1,
+                                "global_lifepoint_1": 1,
+                                "global_skillrecovery_1": 1,
+                                "global_skillrecovery_2": 0,
+                                "global_squadnum_1": 1
+                            }
+                        },
+                        "sInfo": {
+                            "assistCnt": 0,
+                            "chars": [],
+                            "history": {},
+                            "maxPnt": -1
+                        },
+                        "tCoin": 0,
+                        "temporary": {
+                            "challenge": {
+                                "pointList": {
+                                    "0": -1,
+                                    "1": -1,
+                                    "2": -1,
+                                    "3": -1,
+                                    "4": -1,
+                                    "5": -1,
+                                    "6": -1,
+                                    "7": -1,
+                                    "8": -1
+                                },
+                                "taskList": {
+                                    "dailyTask_2": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    }
+                                },
+                                "topPoint": -1
+                            },
+                            "nst": 1536139200,
+                            "point": -1,
+                            "schedule": "rg2"
+                        }
+                    },
+                    "rune_season_3_1": {
+                        "coin": 0,
+                        "permanent": {
+                            "challenge": {
+                                "pointList": {
+                                    "1": -1,
+                                    "10": -1,
+                                    "11": -1,
+                                    "12": -1,
+                                    "13": -1,
+                                    "14": -1,
+                                    "15": -1,
+                                    "16": -1,
+                                    "17": -1,
+                                    "18": -1,
+                                    "2": -1,
+                                    "3": -1,
+                                    "4": -1,
+                                    "5": -1,
+                                    "6": -1,
+                                    "7": -1,
+                                    "8": -1,
+                                    "9": -1
+                                },
+                                "taskList": {
+                                    "normalTask_1": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_2": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_3": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_4": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_5": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_6": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_7": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_8": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    }
+                                },
+                                "topPoint": -1
+                            },
+                            "nst": -1,
+                            "point": -1,
+                            "rune": {
+                                "char_atkatkspeed_1": 1,
+                                "char_atkatkspeed_2": 0,
+                                "char_atkatkspeed_3": 0,
+                                "char_cost_special_1": 1,
+                                "char_cost_special_2": 0,
+                                "char_hp_1": 1,
+                                "char_hp_2": 0,
+                                "char_hp_3": 0,
+                                "enemy_atk_1": 1,
+                                "enemy_atk_2": 0,
+                                "enemy_atk_3": 0,
+                                "enemy_dbskar_1": 1,
+                                "enemy_dbskar_2": 0,
+                                "enemy_dbskar_3": 0,
+                                "enemy_def_1": 1,
+                                "enemy_dlancer_1": 1,
+                                "enemy_dlancer_2": 0,
+                                "enemy_dmgswd_1": 1,
+                                "enemy_dmgswd_2": 0,
+                                "enemy_dmgswd_3": 0,
+                                "enemy_dscout_1": 1,
+                                "enemy_dscout_2": 0,
+                                "enemy_dscout_3": 0,
+                                "enemy_hp_1": 1,
+                                "enemy_hp_2": 0,
+                                "enemy_hp_3": 0,
+                                "global_forbidloc_1": 1,
+                                "global_forbidloc_2": 0,
+                                "global_forbidloc_3": 0,
+                                "global_lifepoint_1": 1,
+                                "global_squadnum_1": 1,
+                                "token_blower_1": 1,
+                                "token_blower_2": 0
+                            }
+                        },
+                        "sInfo": {
+                            "assistCnt": 0,
+                            "chars": [],
+                            "history": {},
+                            "maxPnt": 0
+                        },
+                        "tCoin": 0,
+                        "temporary": {
+                            "challenge": {
+                                "pointList": {
+                                    "0": -1,
+                                    "1": -1,
+                                    "2": -1,
+                                    "3": -1,
+                                    "4": -1,
+                                    "5": -1,
+                                    "6": -1,
+                                    "7": -1,
+                                    "8": -1
+                                },
+                                "taskList": {
+                                    "dailyTask_10": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    }
+                                },
+                                "topPoint": -1
+                            },
+                            "nst": 1603334400,
+                            "point": -1,
+                            "schedule": "rg10"
+                        }
+                    },
+                    "rune_season_5_1": {
+                        "coin": 0,
+                        "permanent": {
+                            "challenge": {
+                                "pointList": {
+                                    "1": -1,
+                                    "10": -1,
+                                    "11": -1,
+                                    "12": -1,
+                                    "13": -1,
+                                    "14": -1,
+                                    "15": -1,
+                                    "16": -1,
+                                    "17": -1,
+                                    "18": -1,
+                                    "2": -1,
+                                    "3": -1,
+                                    "4": -1,
+                                    "5": -1,
+                                    "6": -1,
+                                    "7": -1,
+                                    "8": -1,
+                                    "9": -1
+                                },
+                                "taskList": {
+                                    "normalTask_1": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_2": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_3": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_4": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_5": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    },
+                                    "normalTask_6": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    }
+                                },
+                                "topPoint": -1
+                            },
+                            "nst": 1633627200,
+                            "point": -1,
+                            "rune": {
+                                "char_atk_1": 1,
+                                "char_atk_2": 0,
+                                "char_atk_3": 0,
+                                "char_cost_casterdefender_1": 1,
+                                "char_cost_guardhealer_1": 1,
+                                "char_defmagicresistance_1": 1,
+                                "char_defmagicresistance_2": 0,
+                                "char_defmagicresistance_3": 0,
+                                "char_exclude_casterdefender_2": 0,
+                                "char_exclude_guardhealer_2": 0,
+                                "char_hp_2": 0,
+                                "enemy_atk_1": 1,
+                                "enemy_atk_2": 0,
+                                "enemy_atk_3": 0,
+                                "enemy_attackspeed_1": 1,
+                                "enemy_dekght_1": 1,
+                                "enemy_dekght_amod_2": 0,
+                                "enemy_dekght_amod_3": 0,
+                                "enemy_dekght_bmod_2": 0,
+                                "enemy_dekght_bmod_3": 0,
+                                "enemy_lfkght_1": 1,
+                                "enemy_lfkght_2": 0,
+                                "enemy_scorpn_1": 1,
+                                "global_costrecovery_1": 1,
+                                "global_costrecovery_2": 0,
+                                "global_forbidloc_left_1": 1,
+                                "global_forbidloc_right_1": 1,
+                                "global_lifepoint_1": 1,
+                                "global_pcharnum_1": 1,
+                                "global_pcharnum_2": 0,
+                                "global_squadnum_1": 1,
+                                "global_squadnum_2": 0
+                            }
+                        },
+                        "sInfo": {
+                            "assistCnt": 0,
+                            "chars": [],
+                            "history": {},
+                            "maxPnt": -1
+                        },
+                        "tCoin": 0,
+                        "temporary": {
+                            "challenge": {
+                                "pointList": {
+                                    "0": -1,
+                                    "1": -1,
+                                    "2": -1,
+                                    "3": -1,
+                                    "4": -1,
+                                    "5": -1,
+                                    "6": -1,
+                                    "7": -1,
+                                    "8": -1
+                                },
+                                "taskList": {
+                                    "dailyTask_1": {
+                                        "fts": -1,
+                                        "rts": -1
+                                    }
+                                },
+                                "topPoint": -1
+                            },
+                            "nst": 1623195200,
+                            "point": -1,
+                            "schedule": "rg1"
+                        }
+                    }
+                },
+                "shop": {
+                    "coin": 0,
+                    "info": [],
+                    "progressInfo": {}
+                },
+                "training": {
+                    "currentStage": [
+                        "tr_level_rune_03-01",
+                        "tr_level_rune_03-02",
+                        "tr_level_rune_04-01",
+                        "tr_level_rune_05-02",
+                        "tr_level_rune_05-01",
+                        "tr_level_rune_06-02",
+                        "tr_level_rune_06-01"
+                    ],
+                    "nst": 1623232000,
+                    "stage": {
+                        "tr_level_rune_01-01": {
+                            "point": -1
+                        },
+                        "tr_level_rune_01-02": {
+                            "point": -1
+                        },
+                        "tr_level_rune_01-03": {
+                            "point": -1
+                        },
+                        "tr_level_rune_02-01": {
+                            "point": -1
+                        },
+                        "tr_level_rune_02-02": {
+                            "point": -1
+                        },
+                        "tr_level_rune_02-03": {
+                            "point": -1
+                        },
+                        "tr_level_rune_02-04": {
+                            "point": -1
+                        },
+                        "tr_level_rune_02-05": {
+                            "point": -1
+                        },
+                        "tr_level_rune_03-01": {
+                            "point": -1
+                        },
+                        "tr_level_rune_03-02": {
+                            "point": -1
+                        },
+                        "tr_level_rune_04-01": {
+                            "point": -1
+                        },
+                        "tr_level_rune_05-01": {
+                            "point": -1
+                        },
+                        "tr_level_rune_05-02": {
+                            "point": -1
+                        },
+                        "tr_level_rune_06-01": {
+                            "point": -1
+                        },
+                        "tr_level_rune_06-02": {
+                            "point": -1
+                        }
+                    }
+                }
+            },
+            "pushFlags": {
+                "hasFriendRequest": 0,
+                "hasGifts": 1
+            },
+            "status": {
+                "lastOnlineTs": 1623154960,
+                "resume": "相关功能优化中，签名暂无法保存，请等待后续开放。（修改任务不受影响）"
+            }
+        }
+    },
+    "result": {
+        "4": {
+            "announcementPopUpVersion": "1058",
+            "announcementVersion": "535"
+        }
+    },
+    "ts": 1623154960
+}

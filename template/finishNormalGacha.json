@@ -1,0 +1,64 @@
+{
+    "charGet": {
+        "charId": "char_121_lava",
+        "charInstId": 20,
+        "isNew": 0,
+        "itemGet": [
+            {
+                "count": 5,
+                "id": "4005",
+                "type": "LGG_SHD"
+            },
+            {
+                "count": 1,
+                "id": "p_char_121_lava",
+                "type": "MATERIAL"
+            }
+        ]
+    },
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "dexNav": {
+                "character": {
+                    "char_121_lava": {
+                        "charInstId": 20,
+                        "count": 51
+                    }
+                }
+            },
+            "inventory": {
+                "p_char_121_lava": 3
+            },
+            "recruit": {
+                "normal": {
+                    "slots": {
+                        "1": {
+                            "durationInSec": -1,
+                            "maxFinishTs": -1,
+                            "realFinishTs": -1,
+                            "selectTags": [],
+                            "startTs": -1,
+                            "state": 1,
+                            "tags": [
+                                3,
+                                4,
+                                6,
+                                10,
+                                22
+                            ]
+                        }
+                    }
+                }
+            },
+            "status": {
+                "lggShard": 267
+            },
+            "troop": {
+                "chars": {},
+                "curCharInstId": 110
+            }
+        }
+    },
+    "result": 0
+}
