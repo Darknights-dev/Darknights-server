@@ -92,6 +92,7 @@ View [wiki](https://github.com/Darknights-master/Darknights-server/wiki)
 - [ ] Mission/Flag/Story System (活动**)
 - [x] Battle 
 + - [x] Save/Get BattleReplay (代理指挥)
++ - [x] Squad (编队)
 + - [ ] AntiCheat (反作弊 不打算实现)
 + - [ ] Count (作战计数)
 + - [ ] **Rewards (奖励系统)**
