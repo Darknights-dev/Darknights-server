@@ -7,13 +7,13 @@
 
 Darknights 服务器，目前只实现中国大陆CN服务器
 
+功能：模拟抽卡及作战等。
+
 由于开发者精力(能力)有限，大部分游戏内功能目前*并未实现*。
 
 如果您有好的想法或建议，或者想参与到开发中，欢迎提交[issue](https://github.com/Darknights-master/Darknights-server/issues)或[pull request](https://github.com/Darknights-master/Darknights-server/pulls)
 
-<strike>破解yj服务器 x </strike>
-
-<strike>自己建服务器 √ </strike>
+<strike>总之不能重蹈覆辙某攻略组或某某党</strike>
 
 [开发讨论Discord](https://discord.gg/SmuB88RR5W)
 
