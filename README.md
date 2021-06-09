@@ -58,6 +58,10 @@ Shell下python cytokinesis.py即可
 
 View [wiki](https://github.com/Darknights-master/Darknights-server/wiki)
 
+## ViewCount
+
+![:darknights](https://count.getloli.com/get/@:darknights)
+
 ## Todo
 
 <strike>显然远不止这些，毕竟是一个*一年15.578亿流水的大公司*做的</strike>
