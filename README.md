@@ -1,6 +1,6 @@
 <div align="center">
 
-[![logo](https://raw.githubusercontent.com/Darknights-master/Darknights-server/main/assets/icon-192x192.png)](https://github.com/arkntools)
+[![logo](https://raw.githubusercontent.com/Darknights-master/Darknights-server/main/assets/icon-192x192.png)](https://github.com/Darknights-master)
 # Darknights - Darknights Server
 *You know exactly what it is*
 </div>
