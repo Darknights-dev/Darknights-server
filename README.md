@@ -13,7 +13,6 @@ Darknights 服务器，目前只实现中国大陆CN服务器
 
 如果您有好的想法或建议，或者想参与到开发中，欢迎提交[issue](https://github.com/Darknights-master/Darknights-server/issues)或[pull request](https://github.com/Darknights-master/Darknights-server/pulls)
 
-<strike>总之不能重蹈覆辙某攻略组或某某党</strike>
 
 [开发讨论Discord](https://discord.gg/SmuB88RR5W)
 
@@ -25,16 +24,33 @@ python 3.x
 mongodb
 bottle >= 0.13
 pymongo >= 3.11
-gunicorn
-nginx(推荐)
+nginx
 ```
-开发使用 bottle + gunicorn + nginx 环境，请自签证书并放置于cert目录下
+部署使用 bottle + nginx 
 
 请结合[代理](https://github.com/Darknights-master/Darknights-proxy)使用
 
 **启动前请检查Mongodb运行状态**
 
-Shell下python cytokinesis.py即可
+Shell下python main.py即可
+
+### nginx实现https转http
+```
+server {
+    listen 9443 ssl;
+    server_name example.com;
+    ssl_certificate fullchain.pem;
+    ssl_certificate_key privkey.pem;
+    location / {
+        proxy_set_header Host $host;
+        proxy_set_header X_REAL_IP $remote_addr; 
+        proxy_set_header X-FORWAED_FOR $proxy_add_x_forwarded_for;
+        proxy_set_header X-FORWAED-PROTO $scheme;
+        proxy_pass http://localhost:9444; 
+        proxy_read_timeout 90;
+    }
+}
+```
 
 ## License
 
