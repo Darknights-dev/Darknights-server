@@ -37,16 +37,25 @@ def account_syncData():
 
     Ts = int(time.time())
 
-    with open('./template/fullStage.json', 'r', encoding='utf-8') as f:
-        stages = f.read()
-    with open('./template/syncData.json', 'r', encoding='utf-8') as f:
-        empty_user = f.read()
+    medium = file.readFile('./template/syncData.json')
+    stageTable = file.readFile('./serverData/stage_table.json')
+    
 
-    medium = json.loads(empty_user)
-
+    emptyStage = {
+                    "stageId":"",
+                    "completeTimes":0,
+                    "startTimes":0,
+                    "practiceTimes":0,
+                    "state":3,
+                    "hasBattleReplay":0,
+                    "noCostCnt":0
+                }
+    fullStage = {}
+    for i in stageTable['stages'].keys():
+        fullStage[i] = emptyStage
+        fullStage[i]['stageId'] = i
     # we are using full stage
-    fullStage = json.loads(stages)
-    medium['user']['dungeon']['stages'] = fullStage['dungeon']['stages']
+    medium['user']['dungeon']['stages'] = fullStage
 
     # Load data from db
     medium['user']['status'] = user['status']
