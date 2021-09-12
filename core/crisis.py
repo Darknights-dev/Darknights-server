@@ -27,4 +27,3 @@ def crisis_getGoodList():
     
     medium = file.readFile('./serverData/crisisGoodList.json')
     return medium
-    return
