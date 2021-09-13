@@ -59,6 +59,7 @@ def user_exchangeDiamondShard():
         "modified": {
             "status": {
                 "androidDiamond": 0,
+                "iosDiamond": 0,
                 "diamondShard": 0
             }
         }
@@ -67,11 +68,12 @@ def user_exchangeDiamondShard():
     """
     medium = json.loads(resp)
     modify = medium['playerDataDelta']['modified']
-    modify['status']['androidDiamond'] = user['status']['androidDiamond'] - count
+    modify['status']['iosDiamond'] = modify['status']['androidDiamond'] = user['status']['androidDiamond'] - count
     modify['status']['diamondShard'] = user['status']['diamondShard'] + 180 * count
 
     api.update(user, {
-        'status.androidDiamond': user['status']['androidDiamond'] - count,
-        'status.diamondShard': user['status']['diamondShard'] + 180 * count
+        'status.androidDiamond': modify['status']['androidDiamond'],
+        'status.iosDiamond': modify['status']['androidDiamond'],
+        'status.diamondShard': modify['status']['diamondShard']
     })
     return medium

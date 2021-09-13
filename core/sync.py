@@ -59,6 +59,10 @@ def account_syncData():
 
     # Load data from db
     medium['user']['status'] = user['status']
+    
+    # No difference between android and ios
+    medium['user']['status']['iosDiamond'] = medium['user']['status']['androidDiamond']
+    
     medium['user']['troop'] = user['troop']
     medium['user']['dexNav']['character'] = user['dexNav']['character']
     medium['user']['building'] = user['building']
