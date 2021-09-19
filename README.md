@@ -13,6 +13,8 @@ Darknights 服务器，目前只实现中国大陆CN服务器
 
 主流程：Arknights客户端 -> Mitmproxy代理 -> Internet -> Nginx -> Bottle框架
 
+![flow.png](https://i.loli.net/2021/09/19/la9fr5dkCOLYvZU.png)
+
 由于开发者精力(能力)有限，大部分游戏内功能目前*并未实现*.
 
 如果您有好的想法或建议，或者想参与到开发中，欢迎提交[issue](https://github.com/Darknights-master/Darknights-server/issues)或[pull request](https://github.com/Darknights-master/Darknights-server/pulls)
