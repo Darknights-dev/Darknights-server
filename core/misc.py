@@ -77,3 +77,17 @@ def user_exchangeDiamondShard():
         'status.diamondShard': modify['status']['diamondShard']
     })
     return medium
+
+
+@route('/storyreview/markStoryAcceKnown', method='POST')
+def storyreview_markStoryAcceKnown():
+    resp = """
+    {
+        "orderIdList": [],
+        "playerDataDelta": {
+            "deleted": {},
+            "modified": {}
+            }
+    }
+        """
+    return json.loads(resp)

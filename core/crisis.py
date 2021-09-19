@@ -3,9 +3,10 @@
 # Description: Crisis System
 
 from bottle import *
-import json
 
 from utils import logger, file
+
+import json
 
 
 @route('/crisis/getInfo', method='POST')
@@ -19,11 +20,34 @@ def crisis_getInfo():
     medium['ts'] = int(time.time())
     return medium
 
+
 @route('/crisis/getGoodList', method='POST')
 def crisis_getGoodList():
     """
     """
     logger.info('Hit /crisis/getGoodList', request.environ.get('HTTP_X_FORWARDED_FOR'))
-    
+
     medium = file.readFile('./serverData/crisisGoodList.json')
+    return medium
+
+
+@route('/crisis/battleStart', method='POST')
+def crisis_battleStart():
+    """
+    No solution now.
+    """
+    logger.info('Hit /crisis/battleStart', request.environ.get('HTTP_X_FORWARDED_FOR'))
+    data = """
+    {
+    "battleId": "",
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {}
+    },
+    "result": 0,
+    "sign": "",
+    "signStr": ""
+    }
+    """
+    medium = json.loads(data)
     return medium

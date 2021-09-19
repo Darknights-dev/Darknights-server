@@ -5,7 +5,7 @@
 from bottle import *
 import json, time
 
-from utils import logger, api, err
+from utils import logger, api, err, file
 
 with open('./serverData/gamedata_const.json', 'r', encoding='utf-8') as f:
     constConfig = json.loads(f.read())
@@ -120,3 +120,9 @@ def charBuild_changeCharSkin():
 @route('/charBuild/evolveChar', method='POST')
 def charBuild_evolveChar():
     return
+
+
+@route('/charBuild/batchSetCharVoiceLan', method='POST')
+def charBuild_batchSetCharVoiceLan():
+    medium = file.readFile('./template/voiceSettings.json')
+    return medium
