@@ -1,1 +1,0 @@
-Please place cert.pem key.pem server.csr here
