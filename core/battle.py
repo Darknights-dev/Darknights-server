@@ -212,7 +212,7 @@ def quest_saveBattleReplay():
     medium['playerDataDelta']['modified']['dungeon']['stages'][stageId] = {"hasBattleReplay": 1}
     api.update(user, {
         'battleReplay.' + stageId: battleReplay,
-        'dungeon.stages.' + stageId + 'hasBattleReplay': 1
+        'dungeon.stages.' + stageId + '.hasBattleReplay': 1
     })
     return medium
 
