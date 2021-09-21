@@ -12,6 +12,11 @@ logger.info('Connecting to database.')
 main_db = main_client["Darknights"]
 user_rol = main_db['users']
 
+# init DB
+status = user_rol.find_one({'system': 1})
+if not status:
+    user_rol.insert_one({'system': 1, 'user_count': 0})
+
 
 def getUserCount():
     dbStatus = user_rol.find_one({'system': 1})
