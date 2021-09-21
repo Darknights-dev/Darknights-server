@@ -2,7 +2,7 @@
 
 [![logo](https://raw.githubusercontent.com/Darknights-master/Darknights-server/main/assets/icon-192x192.png)](https://github.com/Darknights-master)
 # Darknights - Darknights Server
-*You know exactly what it is*
+*More than a gacha system*
 </div>
 
 Darknights 服务器，目前只实现中国大陆CN服务器
@@ -22,22 +22,6 @@ Darknights 服务器，目前只实现中国大陆CN服务器
 
 [开发讨论Discord](https://discord.gg/SmuB88RR5W)
 
-## Deployment
-
-### requirements
-```
-python 3.x
-mongodb
-bottle >= 0.13
-pymongo >= 3.11
-nginx
-```
-使用 bottle + nginx 
-
-**启动前请检查Mongodb运行状态**
-
-详细教程参见[wiki](https://github.com/Darknights-master/Darknights-server/wiki/%E9%83%A8%E7%BD%B2)
-
 
 ## License
 
@@ -49,22 +33,39 @@ nginx
 
 ⚠いかなる形の商業的使用も禁止されています
 
-项目icon系作者手搓, inspired by [Texas](https://www.pixiv.net/artworks/87060370)
+项目icon inspired by [Texas](https://www.pixiv.net/artworks/87060370)
 
 本Project与 **上海鹰角网络科技有限公司(HYPERGRYPH)** 及其旗下手游 **明日方舟(Arknights)** 无任何直接或间接的关联
 
-## Contributors
+## 部署
 
-[![contributors](https://contributors-img.web.app/image?repo=Darknights-master/Darknights-server)](https://github.com/Darknights-master/Darknights-server/graphs/contributors)
+### requirements
+```
+python 3.x
+mongodb
+nginx
+bottle >= 0.13
+pymongo >= 3.11
+```
 
-## Development
+**启动前请检查Mongodb运行状态**
 
-参见[wiki](https://github.com/Darknights-master/Darknights-server/wiki)
+详细教程参见[wiki](https://github.com/Darknights-master/Darknights-server/wiki)
+
+## [Todo List](https://github.com/Darknights-master/Darknights-server/wiki/Todo)
 
 ## ViewCount
 
 ![:darknights](https://count.getloli.com/get/@:darknights)
 
-## Todo
+## Contributors
 
-[Todo](https://github.com/Darknights-master/Darknights-server/wiki/Todo)
+[![contributors](https://contributors-img.web.app/image?repo=Darknights-master/Darknights-server)](https://github.com/Darknights-master/Darknights-server/graphs/contributors)
+
+## Acknowledgments
+
+[Tao0lu: Server-side Proxy](https://github.com/Tao0Lu/Arknights_Anti-addiction_Cheater)
+
+[guch8017: Gacha System](https://github.com/guch8017/ArknightsGachaMonitor)
+
+[Kengxxiao: Game Data](https://github.com/Kengxxiao/ArknightsGameData)
