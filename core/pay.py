@@ -73,23 +73,11 @@ def pay_confirmOrder():
         "deleted": {},
         "modified": {
             "status": {
-                "diamondShard": 99999
             }
         }
     },
     "receiveItems": {
-        "items": [
-            {
-                "count": 10000,
-                "id": "4001",
-                "type": "GOLD"
-            },
-            {
-                "count": 20,
-                "id": "2001",
-                "type": "CARD_EXP"
-            }
-        ]
+        "items": []
     },
     "result": 0
 }

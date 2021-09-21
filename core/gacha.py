@@ -14,19 +14,121 @@ false = 'false'
 true = 'true'
 null = 'null'
 
-# Load chars from char table
-with open('./serverData/character_table.json', 'r', encoding='utf-8') as f:
-    fullCharList = eval(f.read())
-    fullCharName = []
-    for i in fullCharList:
-        if fullCharList[i]['isNotObtainable'] == false:
-            if i.startswith('char'):
-                fullCharName.append(i)
+# 常量部分
+oneAdvancedGachaCost = 600  # 合成玉消耗
+startAdd = 50  # 保底数量(修改为0时无保底)  <- this will be moved to user data in future version
+percentageSSSR = 2  # 六星概率
+percentageSSSRAdd = 2  # 保底概率增加
+percentageSSR = 8  # 五星概率
+percentageSR = 50  # 四星概率
+chanceUp = [[], [], [], []]  # 特殊UP活动,分别对应3、4、5、6
+selfDefined = False  # 是否自定义抽卡,该项为True时不进行随机生成.
+selfDefinedList = []  # 自定义抽卡数据，填入干员ID，不知道的可访问/showDb查看。一定要填满十个！
 
-logger.info(str(len(fullCharName)) + ' operators loaded.')
+# 统计用变量
+listR = [[], [], [], []]  # 干员列表
+listName = [[], [], [], []]  # 干员名
+fullCharList = {}  # 全部干员信息
+listCount = [0, 0, 0, 0, 0, 0]  # 抽取数量统计
+total = 0  # 总抽取数量
+save = 0  # 保底统计
 
-# this will be replaced with ./serverData/pool/xxx
-oneGachaCost = 600
+# 公招限定
+charNotIncluded = {'estell', 'savage', 'grani', 'tiger', 'hpsts', 'amiya'}
+
+
+def charListInit():
+    global listR, listCount, fullCharList
+    charCount = 0
+    with open('./serverData/character_table.json', 'r', encoding='utf-8') as infile:
+        js = json.loads(infile.read())
+        for (key, value) in js.items():
+            if value["isNotObtainable"]:
+                continue
+            if not key.startswith('char'):
+                continue
+            for limit in charNotIncluded:
+                if key.endswith(limit):
+                    continue
+            rarity = value["rarity"]
+            fullCharList[key] = value
+            listR[rarity - 2].append(key)
+            listName[rarity - 2].append(value['name'])
+            listCount[rarity - 2] += 1
+            charCount += 1
+    logger.info(str(charCount) + ' Gacha-able Operators Loaded.')
+
+
+charListInit()
+
+
+@route('/chars')
+def print_db():
+    output = '''<!DOCTYPE html>
+    <html>
+    <head> 
+    <meta charset="utf-8" /> 
+    <title>干员列表</title> 
+    </head> 
+    <body> 
+
+    '''
+    rare_list = ['三星', '四星', '五星', '六星']
+    for i in range(4):
+        output += ('<center style="font-size:18px;color:#FF0000">' + rare_list[i] + '</center>\n<center>')
+        for j in range(len(listR[i])):
+            output += (listName[i][j] + ' : ' + listR[i][j] + '<br/>')
+        output += '</center>'
+    output += '''
+    </body>
+    </html>
+    '''
+    return output
+
+
+def getChance():
+    sssr_percentage = percentageSSSR
+    if startAdd == 0:
+        return sssr_percentage
+    if save > startAdd:
+        sssr_percentage += (save - startAdd) * percentageSSSRAdd
+    return sssr_percentage
+
+
+def getGachaItem(rarity):
+    l1 = len(listR[rarity - 3])
+    l2 = len(chanceUp[rarity - 3])
+    if l2 != 0:
+        if random.randrange(1, 3) == 1:
+            return chanceUp[rarity - 3][random.randrange(0, l2)]
+    return str(listR[rarity - 3][random.randrange(0, l1)])
+
+
+def gachaGetOne():
+    global total, save
+    s = random.randrange(1, 101)
+    chance = getChance()
+    'S:{}, Chance:{}'.format(s, chance)
+    if s <= chance:
+        # SSSR
+        total += 1
+        save = 0
+        return getGachaItem(6)
+    elif s <= chance + percentageSSR:
+        # SSR
+        total += 1
+        save += 1
+        return getGachaItem(5)
+    elif s <= chance + percentageSSR + percentageSR:
+        # SR
+        total += 1
+        save += 1
+        return getGachaItem(4)
+    else:
+        # R
+        total += 1
+        save += 1
+        return getGachaItem(3)
 
 
 @route('/gacha/syncNormalGacha', method='POST')
@@ -68,7 +170,7 @@ def gacha_advancedGacha():
     diamondShard = user['status']['diamondShard']
     lggShard = user['status']['lggShard']
 
-    if diamondShard - oneGachaCost < 0:
+    if diamondShard - oneAdvancedGachaCost < 0:
         return json.loads('{"result":1}')
 
     """
@@ -79,8 +181,7 @@ def gacha_advancedGacha():
     Ts = int(time.time())
 
     curCharInstId = user['troop']['curCharInstId']
-    charId = random.randint(0, len(fullCharName) - 1)
-    charGet = fullCharName[charId]
+    charGet = gachaGetOne()
     isNew = 1
     if charGet in user['dexNav']['character']:
         isNew = 0
@@ -171,7 +272,7 @@ def gacha_advancedGacha():
 
     modify['inventory']['p_' + charGet] = 1
 
-    modify['status']['diamondShard'] = diamondShard - oneGachaCost
+    modify['status']['diamondShard'] = diamondShard - oneAdvancedGachaCost
     modify['status']['lggShard'] = lggShard + 10
 
     # New Char Get
@@ -218,7 +319,7 @@ def gacha_advancedGacha():
     # Subtract
     api.update(user, {
         'status.lggShard': lggShard + 10,
-        'status.diamondShard': diamondShard - oneGachaCost
+        'status.diamondShard': diamondShard - oneAdvancedGachaCost
     })
 
     return medium
@@ -240,21 +341,20 @@ def gacha_tenAdvancedGacha():
     if user is None:
         return json.loads('{"result":1}')
 
-    if user['status']['diamondShard'] - 10 * oneGachaCost < 0:
+    if user['status']['diamondShard'] - 10 * oneAdvancedGachaCost < 0:
         return json.loads('{"result":1}')
 
     Ts = int(time.time())
 
     gachaResultList = []  # gacha result, all chars directly send back
     instIdResult = {}  # save generated char's instId
-    newCharList = {}  # real NEW char
+    newCharList = {}  # real NEW char (not obtain yet)
     inventory = {}  # char's inventory
 
     curCharInstId = user['troop']['curCharInstId']
 
     for num in range(10):
-        charId = random.randint(0, len(fullCharName) - 1)
-        charGet = fullCharName[charId]
+        charGet = gachaGetOne()
 
         isNew = 1
         if charGet in user['dexNav']['character']:  # if char was gotten
@@ -356,11 +456,11 @@ def gacha_tenAdvancedGacha():
 
     modify = medium['playerDataDelta']['modified']
     modify['inventory'] = inventory
-    modify['status']['diamondShard'] = user['status']['diamondShard'] - 10 * oneGachaCost
+    modify['status']['diamondShard'] = user['status']['diamondShard'] - 10 * oneAdvancedGachaCost
     modify['status']['lggShard'] = user['status']['lggShard'] + 10 * 10
     api.update(user, {
         'status.lggShard': user['status']['lggShard'] + 10 * 10,
-        'status.diamondShard': user['status']['diamondShard'] - 10 * oneGachaCost,
+        'status.diamondShard': user['status']['diamondShard'] - 10 * oneAdvancedGachaCost,
         'troop.curCharInstId': curCharInstId
     })
     modify['troop']['curCharInstId'] = curCharInstId  # finish all gacha
