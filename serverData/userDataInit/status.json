@@ -1,8 +1,8 @@
 {
     "nickName": "",
     "nickNumber": "001",
-    "level": 0,
-    "exp": 0,
+    "level": 100,
+    "exp": 100,
     "socialPoint": 0,
     "gachaTicket": 0,
     "tenGachaTicket": 0,
@@ -15,6 +15,8 @@
     "apLimitUpFlag": 0,
     "flags": {
 				"init": 1,
+				"obt/guide/l0-0/0_home_ui": 1,
+				"obt/guide/l0-0/1_recruit_adv": 1,
 				"obt/guide/l0-0/2_make_squad": 1,
 				"obt/guide/l0-0/3_battle_ui": 1
 			},
@@ -39,5 +41,6 @@
     "avatar": {},
     "lastOnlineTs": 0,
     "lastRefreshTs": 0,
-    "registerTs": 0
+    "registerTs": 0,
+	"uid": 0
 }
