@@ -88,7 +88,7 @@ def account_syncData():
     # medium['user']['inventory'][i] = 1
 
     # Update db
-    # api.update(user, {'status': medium['user']['status']})
+    api.update(user, {'status': medium['user']['status']})
 
     return json.dumps(medium, ensure_ascii=False)
 
