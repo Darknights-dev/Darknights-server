@@ -70,3 +70,41 @@ def quest_finishStoryStage():
 }
 """
     return json.loads(resp)
+
+
+@route('/storyreview/markStoryAcceKnown', method='POST')
+def storyreview_markStoryAcceKnown():
+    logger.info('Hit /storyreview/markStoryAcceKnown', request.environ.get('HTTP_X_FORWARDED_FOR'))
+
+    try:
+        secret = request.get_header("secret")
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    if secret is None:
+        return json.loads('{"result":1}')
+
+    user = api.getUserBySecret(secret)
+
+    if user is None:
+        return json.loads('{"result":1}')
+
+    resp = """
+    {
+        "orderIdList": [],
+        "playerDataDelta": {
+            "deleted": {},
+            "modified": {
+                "storyreview":{
+                    "tags":{
+                        "knownStoryAcceleration": 1
+                        }
+                    }
+                }
+            }
+    }
+        """
+    api.update(user, {
+        'storyreview.tags.knownStoryAcceleration': 1
+    })
+    return json.loads(resp)

@@ -43,13 +43,14 @@ def user_register():
     initial_mission = file.readFile('./serverData/userDataInit/mission.json')
     initial_social = file.readFile('./serverData/userDataInit/social.json')
     initial_gacha = file.readFile('./serverData/userDataInit/gacha.json')
-    # initial_dungeon = file.readFile('./serverData/userDataInit/dungeon.json') # we will use full stage now
+    # initial_dungeon = file.readFile('./serverData/userDataInit/dungeon.json')
 
     for index in initial_chars:
         initial_chars[index]['gainTime'] = registerTs
 
     # New User
     uid = api.getNewUid()
+    initial_status['uid'] = uid
     userData = {"account": account,
                 "uid": uid,
                 "password": passwd_hash,
@@ -141,9 +142,9 @@ def user_bindNickName():
             }
         }
     },
-                    "result": 0
+    "result": 0
 }
-                    """
+"""
     medium = json.loads(resp)
 
     medium['playerDataDelta']['modified']['status']['nickName'] = nickName

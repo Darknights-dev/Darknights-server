@@ -5,6 +5,7 @@
 from bottle import *
 import json
 import time
+import copy
 
 from utils import api, logger, err, file
 
@@ -21,6 +22,7 @@ def get_products():
 @route('/account/syncData', method='POST')
 def account_syncData():
     logger.info("Hit /account/syncData", request.environ.get('HTTP_X_FORWARDED_FOR'))
+    # return file.readFile('./data.json')
 
     try:
         secret = request.get_header("secret")
@@ -50,11 +52,14 @@ def account_syncData():
         "noCostCnt": 0
     }
     fullStage = {}
-    for i in stageTable['stages'].keys():
-        fullStage[i] = emptyStage
-        fullStage[i]['stageId'] = i
+
+    for name in stageTable['stages'].keys():
+        emptyStage['stageId'] = str(name)
+        fullStage[str(name)] = copy.deepcopy(emptyStage)
+
     # we are using full stage
     medium['user']['dungeon']['stages'] = fullStage
+    medium['user']['dungeon']['cowLevel'] = {}
 
     # Load data from db
     medium['user']['status'] = user['status']
@@ -66,11 +71,15 @@ def account_syncData():
     medium['user']['dexNav']['character'] = user['dexNav']['character']
     medium['user']['building'] = user['building']
     medium['user']['inventory'] = user['inventory']
+
+    # Update all timestamps
     medium['user']['status']['lastOnlineTs'] = Ts
     medium['user']['status']['lastRefreshTs'] = Ts
+    medium['user']['campaignsV2']['lastRefreshTs'] = Ts
     medium['user']['event']['building'] = Ts
     medium['ts'] = Ts
 
+    # Checkin
     medium['user']['checkIn']['canCheckIn'] = 0
 
     # Experiment zone
@@ -79,15 +88,15 @@ def account_syncData():
     # medium['user']['inventory'][i] = 1
 
     # Update db
-    api.update(user, {'status': medium['user']['status']})
+    # api.update(user, {'status': medium['user']['status']})
 
-    return medium
+    return json.dumps(medium, ensure_ascii=False)
 
 
 @route('/account/syncStatus', method='POST')
 def account_syncStatus():
     logger.info("Hit /account/syncStatus", request.environ.get('HTTP_X_FORWARDED_FOR'))
-
+    # return file.readFile('./stat.json')
     try:
         secret = request.get_header("secret")
         data = json.loads(request.body.read())
