@@ -1,0 +1,302 @@
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "status": {
+                "globalVoiceLan": "JP"
+            },
+            "troop": {
+                "chars": {
+                    "1": {
+                        "voiceLan": "JP"
+                    },
+                    "10": {
+                        "voiceLan": "JP"
+                    },
+                    "11": {
+                        "voiceLan": "JP"
+                    },
+                    "12": {
+                        "voiceLan": "JP"
+                    },
+                    "13": {
+                        "voiceLan": "JP"
+                    },
+                    "14": {
+                        "voiceLan": "JP"
+                    },
+                    "15": {
+                        "voiceLan": "JP"
+                    },
+                    "16": {
+                        "voiceLan": "JP"
+                    },
+                    "17": {
+                        "voiceLan": "JP"
+                    },
+                    "18": {
+                        "voiceLan": "JP"
+                    },
+                    "19": {
+                        "voiceLan": "JP"
+                    },
+                    "2": {
+                        "voiceLan": "JP"
+                    },
+                    "20": {
+                        "voiceLan": "JP"
+                    },
+                    "21": {
+                        "voiceLan": "JP"
+                    },
+                    "22": {
+                        "voiceLan": "JP"
+                    },
+                    "23": {
+                        "voiceLan": "JP"
+                    },
+                    "24": {
+                        "voiceLan": "JP"
+                    },
+                    "25": {
+                        "voiceLan": "JP"
+                    },
+                    "26": {
+                        "voiceLan": "JP"
+                    },
+                    "27": {
+                        "voiceLan": "JP"
+                    },
+                    "28": {
+                        "voiceLan": "JP"
+                    },
+                    "29": {
+                        "voiceLan": "JP"
+                    },
+                    "3": {
+                        "voiceLan": "JP"
+                    },
+                    "30": {
+                        "voiceLan": "JP"
+                    },
+                    "31": {
+                        "voiceLan": "JP"
+                    },
+                    "32": {
+                        "voiceLan": "JP"
+                    },
+                    "33": {
+                        "voiceLan": "JP"
+                    },
+                    "34": {
+                        "voiceLan": "JP"
+                    },
+                    "35": {
+                        "voiceLan": "JP"
+                    },
+                    "36": {
+                        "voiceLan": "JP"
+                    },
+                    "37": {
+                        "voiceLan": "JP"
+                    },
+                    "38": {
+                        "voiceLan": "JP"
+                    },
+                    "39": {
+                        "voiceLan": "JP"
+                    },
+                    "4": {
+                        "voiceLan": "JP"
+                    },
+                    "40": {
+                        "voiceLan": "JP"
+                    },
+                    "41": {
+                        "voiceLan": "JP"
+                    },
+                    "42": {
+                        "voiceLan": "JP"
+                    },
+                    "43": {
+                        "voiceLan": "JP"
+                    },
+                    "44": {
+                        "voiceLan": "JP"
+                    },
+                    "45": {
+                        "voiceLan": "JP"
+                    },
+                    "46": {
+                        "voiceLan": "JP"
+                    },
+                    "47": {
+                        "voiceLan": "JP"
+                    },
+                    "48": {
+                        "voiceLan": "JP"
+                    },
+                    "49": {
+                        "voiceLan": "JP"
+                    },
+                    "5": {
+                        "voiceLan": "JP"
+                    },
+                    "50": {
+                        "voiceLan": "JP"
+                    },
+                    "51": {
+                        "voiceLan": "JP"
+                    },
+                    "52": {
+                        "voiceLan": "JP"
+                    },
+                    "53": {
+                        "voiceLan": "JP"
+                    },
+                    "54": {
+                        "voiceLan": "JP"
+                    },
+                    "55": {
+                        "voiceLan": "JP"
+                    },
+                    "56": {
+                        "voiceLan": "JP"
+                    },
+                    "57": {
+                        "voiceLan": "JP"
+                    },
+                    "58": {
+                        "voiceLan": "JP"
+                    },
+                    "59": {
+                        "voiceLan": "JP"
+                    },
+                    "6": {
+                        "voiceLan": "JP"
+                    },
+                    "60": {
+                        "voiceLan": "JP"
+                    },
+                    "61": {
+                        "voiceLan": "JP"
+                    },
+                    "62": {
+                        "voiceLan": "JP"
+                    },
+                    "63": {
+                        "voiceLan": "JP"
+                    },
+                    "64": {
+                        "voiceLan": "JP"
+                    },
+                    "65": {
+                        "voiceLan": "JP"
+                    },
+                    "66": {
+                        "voiceLan": "JP"
+                    },
+                    "67": {
+                        "voiceLan": "JP"
+                    },
+                    "68": {
+                        "voiceLan": "JP"
+                    },
+                    "69": {
+                        "voiceLan": "JP"
+                    },
+                    "7": {
+                        "voiceLan": "JP"
+                    },
+                    "70": {
+                        "voiceLan": "JP"
+                    },
+                    "71": {
+                        "voiceLan": "JP"
+                    },
+                    "72": {
+                        "voiceLan": "JP"
+                    },
+                    "73": {
+                        "voiceLan": "JP"
+                    },
+                    "74": {
+                        "voiceLan": "JP"
+                    },
+                    "75": {
+                        "voiceLan": "JP"
+                    },
+                    "76": {
+                        "voiceLan": "JP"
+                    },
+                    "77": {
+                        "voiceLan": "JP"
+                    },
+                    "78": {
+                        "voiceLan": "JP"
+                    },
+                    "79": {
+                        "voiceLan": "JP"
+                    },
+                    "8": {
+                        "voiceLan": "JP"
+                    },
+                    "80": {
+                        "voiceLan": "JP"
+                    },
+                    "81": {
+                        "voiceLan": "JP"
+                    },
+                    "82": {
+                        "voiceLan": "JP"
+                    },
+                    "83": {
+                        "voiceLan": "JP"
+                    },
+                    "84": {
+                        "voiceLan": "JP"
+                    },
+                    "85": {
+                        "voiceLan": "JP"
+                    },
+                    "86": {
+                        "voiceLan": "JP"
+                    },
+                    "87": {
+                        "voiceLan": "JP"
+                    },
+                    "88": {
+                        "voiceLan": "JP"
+                    },
+                    "89": {
+                        "voiceLan": "JP"
+                    },
+                    "9": {
+                        "voiceLan": "JP"
+                    },
+                    "90": {
+                        "voiceLan": "JP"
+                    },
+                    "91": {
+                        "voiceLan": "JP"
+                    },
+                    "92": {
+                        "voiceLan": "JP"
+                    },
+                    "93": {
+                        "voiceLan": "JP"
+                    },
+                    "94": {
+                        "voiceLan": "JP"
+                    },
+                    "95": {
+                        "voiceLan": "JP"
+                    },
+                    "96": {
+                        "voiceLan": "JP"
+                    }
+                }
+            }
+        }
+    }
+}
