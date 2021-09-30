@@ -5,7 +5,7 @@
 from bottle import *
 import json
 
-from utils import logger, api, err
+from utils import logger, api, err, encryption
 
 
 @route('/quest/squadFormation', method='POST')
@@ -117,56 +117,63 @@ def quest_battleFinish():
 
     if user is None:
         return json.loads('{"result":1}')
-
     resp = """
-{
-    "additionalRewards": [],
-    "alert": [],
-    "apFailReturn": 0,
-    "expScale": 1.2,
-    "firstRewards": [
-        {
-            "count": 1,
-            "id": "4002",
-            "type": "DIAMOND"
-        }
-    ],
-    "furnitureRewards": [],
-    "goldScale": 1.2,
-    "playerDataDelta": {
-        "deleted": {},
-        "modified": {
-            "building": {
-            },
-            "dexNav": {
-            },
-            "dungeon": {
-            },
-            "medal": {
-
-            },
-            "mission": {
-            },
-            "status": {
-            },
-            "troop": {
+    {
+        "additionalRewards": [],
+        "alert": [],
+        "apFailReturn": 0,
+        "expScale": 1.2,
+        "firstRewards": [
+            {
+                "count": 1,
+                "id": "4002",
+                "type": "DIAMOND"
             }
-        }
-    },
-    "result": 0,
-    "rewards": [
-        {
-            "count": 0,
-            "id": "4001",
-            "type": "GOLD"
-        }
-    ],
-    "unlockStages": [],
-    "unusualRewards": []
-}
-    """
+        ],
+        "furnitureRewards": [],
+        "goldScale": 1.2,
+        "playerDataDelta": {
+            "deleted": {},
+            "modified": {
+                "building": {
+                },
+                "dexNav": {
+                },
+                "dungeon": {
+                },
+                "medal": {
+                },
+                "mission": {
+                },
+                "status": {
+                },
+                "troop": {
+                }
+            }
+        },
+        "result": 0,
+        "rewards": [
+            {
+                "count": 0,
+                "id": "4001",
+                "type": "GOLD"
+            }
+        ],
+        "unlockStages": [],
+        "unusualRewards": []
+    }
+        """
     medium = json.loads(resp)
-    api.update(user, {'status.androidDiamond': user['status']['androidDiamond'] + 1})
+    # Decryption of battle data
+    battle = json.loads(encryption.decrypt_battle_data(data['data'], user['pushFlags']['status']))
+    if battle['interrupt'] == 0 and battle['giveUp'] == 0:
+        if battle['percent'] == 100:  # Full success
+            api.update(user, {'status.androidDiamond': user['status']['androidDiamond'] + 1})
+    else:
+        medium['firstRewards'] = []
+        medium['rewards'] = []
+
+    # Unlock stages needed
     return medium
 
 

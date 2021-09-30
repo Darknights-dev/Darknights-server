@@ -73,6 +73,7 @@ def account_syncData():
     medium['user']['inventory'] = user['inventory']
 
     # Update all timestamps
+    medium['user']['pushFlags']['status'] = Ts
     medium['user']['status']['lastOnlineTs'] = Ts
     medium['user']['status']['lastRefreshTs'] = Ts
     medium['user']['campaignsV2']['lastRefreshTs'] = Ts
@@ -89,6 +90,7 @@ def account_syncData():
 
     # Update db
     api.update(user, {'status': medium['user']['status']})
+    api.update(user, {'pushFlags': medium['user']['pushFlags']})
 
     return json.dumps(medium, ensure_ascii=False)
 
