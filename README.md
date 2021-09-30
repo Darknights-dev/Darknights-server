@@ -2,7 +2,7 @@
 
 [![logo](https://raw.githubusercontent.com/Darknights-master/Darknights-server/main/assets/icon-192x192.png)](https://github.com/Darknights-master)
 # Darknights - Darknights Server
-*More than a gacha system*
+*More than a gacha simulator*
 </div>
 
 Darknights 服务器，目前只实现中国大陆CN服务器
