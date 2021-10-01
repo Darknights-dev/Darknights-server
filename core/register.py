@@ -5,6 +5,7 @@
 from bottle import *
 import json
 import hashlib
+import copy
 
 from utils import logger, rnd, file, err, api
 
@@ -43,7 +44,25 @@ def user_register():
     initial_mission = file.readFile('./serverData/userDataInit/mission.json')
     initial_social = file.readFile('./serverData/userDataInit/social.json')
     initial_gacha = file.readFile('./serverData/userDataInit/gacha.json')
-    # initial_dungeon = file.readFile('./serverData/userDataInit/dungeon.json')
+
+    stageTable = file.readFile('./serverData/stage_table.json')
+
+    emptyStage = {
+        "stageId": "",
+        "completeTimes": 0,
+        "startTimes": 0,
+        "practiceTimes": 0,
+        "state": 0,
+        "hasBattleReplay": 0,
+        "noCostCnt": 0
+    }
+    fullStage = {}
+
+    for name in stageTable['stages'].keys():
+        emptyStage['stageId'] = name
+        if name == "guide_01" or name == "guide_02":
+            emptyStage['state'] = 3
+        fullStage[str(name)] = copy.deepcopy(emptyStage)
 
     for index in initial_chars:
         initial_chars[index]['gainTime'] = registerTs
@@ -51,35 +70,47 @@ def user_register():
     # New User
     uid = api.getNewUid()
     initial_status['uid'] = uid
-    userData = {"account": account,
-                "uid": uid,
-                "password": passwd_hash,
-                "token": token,
-
-                "status": initial_status,
-                "troop": {
-                    "curCharInstId": len(initial_chars) + 1,
-                    "curSquadCount": 4,
-                    "squads": initial_squads,
-                    "chars": initial_chars,
-                    "charGroup": initial_charGroup,
-                    "charMission": {},
-                    "addon": {}
-                },
-                "dexNav": initial_dexNav,
-                "building": initial_building,
-                "medal": initial_medal,
-                "mission": initial_mission,
-                "gacha": initial_gacha,
-                "skin": {
-                    "characterSkins": {},
-                    "skinTs": {}
-                },
-                "shop": initial_shop,
-                "inventory": {},
-                "social": initial_social,
-                "battleReplay": {}
-                }
+    userData = {
+        "account": account,
+        "uid": uid,
+        "password": passwd_hash,
+        "token": token,
+        # Beginning of original user data
+        "status": initial_status,
+        "dungeon": {
+            "stages": fullStage,
+            "cowLevel": {}
+        },
+        "troop": {
+            "curCharInstId": len(initial_chars) + 1,
+            "curSquadCount": 4,
+            "squads": initial_squads,
+            "chars": initial_chars,
+            "charGroup": initial_charGroup,
+            "charMission": {},
+            "addon": {}
+        },
+        "dexNav": initial_dexNav,
+        "building": initial_building,
+        "medal": initial_medal,
+        "mission": initial_mission,
+        "gacha": initial_gacha,
+        "skin": {
+            "characterSkins": {},
+            "skinTs": {}
+        },
+        "shop": initial_shop,
+        "inventory": {},
+        "social": initial_social,
+        "storyreview": {},
+        # End of original user data
+        "battleReplay": {},
+        "gachaStatus": {
+            'guaranteed': 50,  # 保底数量(修改为0时无保底)
+            'total': 0,  # 总抽取数量
+            'save': 0  # 保底统计
+        }
+    }
 
     userData['status']['lastOnlineTs'] = registerTs
     userData['status']['lastRefreshTs'] = registerTs

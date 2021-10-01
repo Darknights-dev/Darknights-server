@@ -8,53 +8,6 @@ import json
 from utils import logger, api, err, encryption
 
 
-@route('/quest/squadFormation', method='POST')
-def quest_squadFormation():
-    """
-    Save squad data to db and response new squad.
-    """
-    logger.info('Hit /quest/squadFormation', request.environ.get('HTTP_X_FORWARDED_FOR'))
-
-    try:
-        secret = request.get_header("secret")
-        data = json.loads(request.body.read())
-        squadId = data['squadId']
-        slots = data['slots']
-    except BaseException:
-        return json.loads(err.badRequestFormat)
-
-    if secret is None:
-        return json.loads('{"result":1}')
-
-    user = api.getUserBySecret(secret)
-
-    if user is None:
-        return json.loads('{"result":1}')
-
-    resp = """
-{
-    "playerDataDelta": {
-        "deleted": {},
-        "modified": {
-            "troop": {
-                "squads": {
-                }
-            }
-        }
-    }
-}
-"""
-    medium = json.loads(resp)
-    medium['playerDataDelta']['modified']['troop']['squads'][str(squadId)] = {
-        'slots': slots}
-
-    api.update(user, {
-        'troop.squads.' + str(squadId) + '.slots': slots
-    })
-
-    return medium
-
-
 @route('/quest/battleStart', method='POST')
 def quest_battleStart():
     """
@@ -140,6 +93,8 @@ def quest_battleFinish():
                 "dexNav": {
                 },
                 "dungeon": {
+                    "stages":{
+                    }
                 },
                 "medal": {
                 },
@@ -166,9 +121,13 @@ def quest_battleFinish():
     medium = json.loads(resp)
     # Decryption of battle data
     battle = json.loads(encryption.decrypt_battle_data(data['data'], user['pushFlags']['status']))
+    stageId = battle['battleId'].split('@')[2]
+    print(battle)
     if battle['interrupt'] == 0 and battle['giveUp'] == 0:
         if battle['percent'] == 100:  # Full success
+            medium['playerDataDelta']['modified']['dungeon']['stages'][stageId] = {'state': 3}
             api.update(user, {'status.androidDiamond': user['status']['androidDiamond'] + 1})
+            api.update(user, {'dungeon.stages.' + stageId + '.state': 3})
     else:
         medium['firstRewards'] = []
         medium['rewards'] = []

@@ -16,7 +16,6 @@ null = 'null'
 
 # 常量部分
 oneAdvancedGachaCost = 600  # 合成玉消耗
-startAdd = 50  # 保底数量(修改为0时无保底)  <- this will be moved to user data in future version
 percentageSSSR = 2  # 六星概率
 percentageSSSRAdd = 2  # 保底概率增加
 percentageSSR = 8  # 五星概率
@@ -30,8 +29,6 @@ listR = [[], [], [], []]  # 干员列表
 listName = [[], [], [], []]  # 干员名
 fullCharList = {}  # 全部干员信息
 listCount = [0, 0, 0, 0, 0, 0]  # 抽取数量统计
-total = 0  # 总抽取数量
-save = 0  # 保底统计
 
 # 公招限定
 charNotIncluded = {'estell', 'savage', 'grani', 'tiger', 'hpsts', 'amiya'}
@@ -86,7 +83,10 @@ def print_db():
     return output
 
 
-def getChance():
+def getChance(user):
+    startAdd = user['gachaStatus']['guaranteed']
+    save = user['gachaStatus']['save']
+
     sssr_percentage = percentageSSSR
     if startAdd == 0:
         return sssr_percentage
@@ -104,30 +104,39 @@ def getGachaItem(rarity):
     return str(listR[rarity - 3][random.randrange(0, l1)])
 
 
-def gachaGetOne():
-    global total, save
-    s = random.randrange(1, 101)
-    chance = getChance()
-    'S:{}, Chance:{}'.format(s, chance)
-    if s <= chance:
+def gachaGetOne(user):
+    total = user['gachaStatus']['total']
+    save = user['gachaStatus']['save']
+    num = random.randrange(1, 101)
+    chance = getChance(user)
+
+    if num <= chance:
         # SSSR
         total += 1
         save = 0
+        api.update(user, {'gachaStatus.save': save})
+        api.update(user, {'gachaStatus.total': total})
         return getGachaItem(6)
-    elif s <= chance + percentageSSR:
+    elif num <= chance + percentageSSR:
         # SSR
         total += 1
         save += 1
+        api.update(user, {'gachaStatus.save': save})
+        api.update(user, {'gachaStatus.total': total})
         return getGachaItem(5)
-    elif s <= chance + percentageSSR + percentageSR:
+    elif num <= chance + percentageSSR + percentageSR:
         # SR
         total += 1
         save += 1
+        api.update(user, {'gachaStatus.save': save})
+        api.update(user, {'gachaStatus.total': total})
         return getGachaItem(4)
     else:
         # R
         total += 1
         save += 1
+        api.update(user, {'gachaStatus.save': save})
+        api.update(user, {'gachaStatus.total': total})
         return getGachaItem(3)
 
 
@@ -181,7 +190,7 @@ def gacha_advancedGacha():
     Ts = int(time.time())
 
     curCharInstId = user['troop']['curCharInstId']
-    charGet = gachaGetOne()
+    charGet = gachaGetOne(user)
     isNew = 1
     if charGet in user['dexNav']['character']:
         isNew = 0
@@ -354,7 +363,7 @@ def gacha_tenAdvancedGacha():
     curCharInstId = user['troop']['curCharInstId']
 
     for num in range(10):
-        charGet = gachaGetOne()
+        charGet = gachaGetOne(user)
 
         isNew = 1
         if charGet in user['dexNav']['character']:  # if char was gotten
