@@ -22,7 +22,6 @@ def get_products():
 @route('/account/syncData', method='POST')
 def account_syncData():
     logger.info("Hit /account/syncData", request.environ.get('HTTP_X_FORWARDED_FOR'))
-    # return file.readFile('./data.json')
 
     try:
         secret = request.get_header("secret")
@@ -40,26 +39,6 @@ def account_syncData():
     Ts = int(time.time())
 
     medium = file.readFile('./template/syncData.json')
-    stageTable = file.readFile('./serverData/stage_table.json')
-
-    emptyStage = {
-        "stageId": "",
-        "completeTimes": 0,
-        "startTimes": 0,
-        "practiceTimes": 0,
-        "state": 3,
-        "hasBattleReplay": 0,
-        "noCostCnt": 0
-    }
-    fullStage = {}
-
-    for name in stageTable['stages'].keys():
-        emptyStage['stageId'] = str(name)
-        fullStage[str(name)] = copy.deepcopy(emptyStage)
-
-    # we are using full stage
-    medium['user']['dungeon']['stages'] = fullStage
-    medium['user']['dungeon']['cowLevel'] = {}
 
     # Load data from db
     medium['user']['status'] = user['status']
@@ -67,10 +46,12 @@ def account_syncData():
     # No difference between android and ios
     medium['user']['status']['iosDiamond'] = medium['user']['status']['androidDiamond']
 
+    medium['user']['dungeon'] = user['dungeon']  # Unlocked
     medium['user']['troop'] = user['troop']
     medium['user']['dexNav']['character'] = user['dexNav']['character']
     medium['user']['building'] = user['building']
     medium['user']['inventory'] = user['inventory']
+    medium['user']['storyreview'] = user['storyreview']
 
     # Update all timestamps
     medium['user']['pushFlags']['status'] = Ts
@@ -98,7 +79,7 @@ def account_syncData():
 @route('/account/syncStatus', method='POST')
 def account_syncStatus():
     logger.info("Hit /account/syncStatus", request.environ.get('HTTP_X_FORWARDED_FOR'))
-    # return file.readFile('./stat.json')
+
     try:
         secret = request.get_header("secret")
         data = json.loads(request.body.read())
