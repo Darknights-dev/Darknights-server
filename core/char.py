@@ -126,7 +126,7 @@ def charBuild_upgradeChar():
         goldCost = round((((characterExpMap[curLevel - 1] - curExp) 
                             / characterExpMap[curLevel - 1]) 
                             * characterUpgradeCostMap[curLevel - 1])
-                           +(( expNew / characterExpMap[levelNew - 1]) 
+                            +(( expNew / characterExpMap[levelNew - 1]) 
                             * characterUpgradeCostMap[levelNew - 1]))
     else:
         for i in range(curLevel + 1 - 1, levelNew - 1 - 1 + 1):
@@ -134,8 +134,8 @@ def charBuild_upgradeChar():
         goldCost = goldCost+ round((((characterExpMap[curLevel - 1] - curExp) 
                                     / characterExpMap[curLevel - 1]) 
                                     * characterUpgradeCostMap[curLevel - 1])
-                        +(( expNew / characterExpMap[levelNew - 1])
-                         * characterUpgradeCostMap[levelNew - 1]))
+                                    +(( expNew / characterExpMap[levelNew - 1])
+                                    * characterUpgradeCostMap[levelNew - 1]))
 
     gold = gold - goldCost
 
