@@ -98,37 +98,44 @@ def charBuild_upgradeChar():
             expDelta = expDelta + 200 * item['count']
 
     Phase = curChar['evolvePhase']
-
     expNow = curExp + expDelta
-
     levelNew = 0
     expCost = 0
-
-    for i in range(curLevel - 1, len(constConfig['characterExpMap'][Phase])):
-        if(expCost + abs(constConfig['characterExpMap'][Phase][i]) > expNow):
+    characterExpMap = constConfig['characterExpMap'][Phase]
+    characterUpgradeCostMap = constConfig['characterUpgradeCostMap'][Phase]
+    for i in range(curLevel - 1, len(characterExpMap)):
+        if(expCost + abs(characterExpMap[i]) > expNow):
             levelNew = i + 1
-            exp = expNow - expCost
+            expNew = expNow - expCost
             break
         else:
-            expCost = expCost + constConfig['characterExpMap'][Phase][i]
+            expCost = expCost + characterExpMap[i]
 
     maxLevel = constConfig['maxLevel'][characterTable[curChar['charId']]["rarity"]][curChar['evolvePhase']]
     if levelNew >= maxLevel:
         levelNew = maxLevel
-        exp = 0
+        expNew = 0
+    
     gold = user['status']['gold']
     goldCost = 0
-
     if curLevel == levelNew:
-        goldCost = round(((exp - curExp) / constConfig['characterExpMap'][Phase][curLevel - 1]) * constConfig['characterUpgradeCostMap'][Phase][curLevel - 1]) 
+        goldCost = round(((expNew - curExp) 
+                          / characterExpMap[curLevel - 1]) 
+                          * characterUpgradeCostMap[curLevel - 1]) 
     elif levelNew == curLevel + 1:
-        goldCost = round((((constConfig['characterExpMap'][Phase][curLevel - 1] - curExp) / constConfig['characterExpMap'][Phase][curLevel - 1]) * constConfig['characterUpgradeCostMap'][Phase][curLevel - 1])
-                        +(( exp / constConfig['characterExpMap'][Phase][levelNew - 1]) * constConfig['characterUpgradeCostMap'][Phase][levelNew - 1]))
+        goldCost = round((((characterExpMap[curLevel - 1] - curExp) 
+                            / characterExpMap[curLevel - 1]) 
+                            * characterUpgradeCostMap[curLevel - 1])
+                           +(( expNew / characterExpMap[levelNew - 1]) 
+                            * characterUpgradeCostMap[levelNew - 1]))
     else:
         for i in range(curLevel + 1 - 1, levelNew - 1 - 1 + 1):
-            goldCost = goldCost + constConfig['characterUpgradeCostMap'][Phase][i]
-        goldCost = goldCost +  round((((constConfig['characterExpMap'][Phase][curLevel - 1] - curExp) / constConfig['characterExpMap'][Phase][curLevel - 1]) * constConfig['characterUpgradeCostMap'][Phase][curLevel - 1])
-                        +(( exp / constConfig['characterExpMap'][Phase][levelNew - 1]) * constConfig['characterUpgradeCostMap'][Phase][levelNew - 1]))
+            goldCost = goldCost + characterUpgradeCostMap[i]
+        goldCost = goldCost+ round((((characterExpMap[curLevel - 1] - curExp) 
+                                    / characterExpMap[curLevel - 1]) 
+                                    * characterUpgradeCostMap[curLevel - 1])
+                        +(( expNew / characterExpMap[levelNew - 1])
+                         * characterUpgradeCostMap[levelNew - 1]))
 
     gold = gold - goldCost
 
@@ -153,14 +160,14 @@ def charBuild_upgradeChar():
 }
 """
     medium = json.loads(resp)
-    api.update(user, {'troop.chars.' + str(data['charInstId']) + '.exp': exp,
+    api.update(user, {'troop.chars.' + str(data['charInstId']) + '.exp': expNew,
                       'troop.chars.' + str(data['charInstId']) + '.level': levelNew,
                       'status.gold': gold})
     for i in data['expMats']:
         medium['playerDataDelta']['modified']['inventory'][i['id']] = user['inventory'][i['id']] - i['count']
         api.update(user,{'inventory.' + i['id']:user['inventory'][i['id']] - i['count']})
     medium['playerDataDelta']['modified']['troop']['chars'] = {
-        str(data['charInstId']): {'exp': exp, 'level': levelNew}}
+        str(data['charInstId']): {'exp': expNew, 'level': levelNew}}
     medium['playerDataDelta']['modified']['status']['gold'] = gold
     return medium
 
