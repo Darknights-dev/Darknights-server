@@ -104,7 +104,7 @@ def charBuild_upgradeChar():
     characterExpMap = constConfig['characterExpMap'][Phase]
     characterUpgradeCostMap = constConfig['characterUpgradeCostMap'][Phase]
     for i in range(curLevel - 1, len(characterExpMap)):
-        if(expCost + abs(characterExpMap[i]) > expNow):
+        if(expCost + characterExpMap[i] > expNow or characterExpMap[i] == -1):
             levelNew = i + 1
             expNew = expNow - expCost
             break
@@ -127,7 +127,11 @@ def charBuild_upgradeChar():
                             / characterExpMap[curLevel - 1]) 
                             * characterUpgradeCostMap[curLevel - 1])
                             +(( expNew / characterExpMap[levelNew - 1]) 
-                            * characterUpgradeCostMap[levelNew - 1]))
+                            * characterUpgradeCostMap[levelNew - 1 if levelNew - 1 < 89 else levelNew - 2]))
+                            # Because expNew must be 0 when upgrade to 90.
+                            # characterExpMap has an extra -1 in the end,
+                            # but characterUpgradeCostMap does not.
+                            # No better idea.
     else:
         for i in range(curLevel + 1 - 1, levelNew - 1 - 1 + 1):
             goldCost = goldCost + characterUpgradeCostMap[i]
@@ -135,7 +139,7 @@ def charBuild_upgradeChar():
                                     / characterExpMap[curLevel - 1]) 
                                     * characterUpgradeCostMap[curLevel - 1])
                                     +(( expNew / characterExpMap[levelNew - 1])
-                                    * characterUpgradeCostMap[levelNew - 1]))
+                                    * characterUpgradeCostMap[levelNew - 1 if levelNew - 1 < 89 else levelNew - 2]))
 
     gold = gold - goldCost
 

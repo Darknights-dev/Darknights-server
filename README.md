@@ -46,6 +46,7 @@ mongodb
 nginx
 bottle >= 0.13
 pymongo >= 3.11
+Crypto
 ```
 
 **启动前请检查Mongodb运行状态**
