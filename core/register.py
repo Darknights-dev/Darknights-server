@@ -5,7 +5,6 @@
 from bottle import *
 import json
 import hashlib
-import copy
 
 from utils import logger, rnd, file, err, api
 
@@ -45,25 +44,9 @@ def user_register():
     initial_social = file.readFile('./serverData/userDataInit/social.json')
     initial_gacha = file.readFile('./serverData/userDataInit/gacha.json')
 
-    stageTable = file.readFile('./serverData/stage_table.json')
-
-    emptyStage = {
-        "stageId": "",
-        "completeTimes": 0,
-        "startTimes": 0,
-        "practiceTimes": 0,
-        "state": 0,
-        "hasBattleReplay": 0,
-        "noCostCnt": 0
-    }
-    fullStage = {}
-
-    for name in stageTable['stages'].keys():
-        emptyStage['stageId'] = name
-        if name == "guide_01" or name == "guide_02":
-            emptyStage['state'] = 3
-        fullStage[str(name)] = copy.deepcopy(emptyStage)
-
+    """
+    Stage & Retro List Generation Moved to sync
+    """
     for index in initial_chars:
         initial_chars[index]['gainTime'] = registerTs
 
@@ -78,7 +61,7 @@ def user_register():
         # Beginning of original user data
         "status": initial_status,
         "dungeon": {
-            "stages": fullStage,
+            "stages": {},
             "cowLevel": {}
         },
         "troop": {
@@ -102,19 +85,36 @@ def user_register():
         "shop": initial_shop,
         "inventory": {},
         "social": initial_social,
-        "storyreview": {},
+        "storyreview": {
+            "groups": {},
+            "tags": {
+                "knownStoryAcceleration": 0
+            }
+        },
+        "retro": {
+            'coin': 999,
+            'supplement': 1,
+            'block': {},
+            'lst': -1,
+            'nst': -1,
+            'trial': {}
+        },
         # End of original user data
         "battleReplay": {},
         "gachaStatus": {
-            'guaranteed': 50,  # 保底数量(修改为0时无保底)
-            'total': 0,  # 总抽取数量
-            'save': 0  # 保底统计
+            "guaranteed": 50,  # 保底数量(修改为0时无保底)
+            "total": 0,  # 总抽取数量
+            "save": 0  # 保底统计
         }
     }
 
     userData['status']['lastOnlineTs'] = registerTs
     userData['status']['lastRefreshTs'] = registerTs
     userData['status']['registerTs'] = registerTs
+
+    inventoryList = file.readFile('./serverData/item_table.json')
+    for i in inventoryList['items']:
+        userData['inventory'][i] = 99999999
 
     api.addUser(userData)
 

@@ -10,6 +10,45 @@ import copy
 from utils import api, logger, err, file
 
 
+def complete_serverData(user):
+    """
+    Completion of New Data
+    """
+    stageTable = file.readFile('./serverData/stage_table.json')
+    retroTable = file.readFile('./serverData/retro_table.json')
+
+    emptyStage = {
+        "stageId": "",
+        "completeTimes": 0,
+        "startTimes": 0,
+        "practiceTimes": 0,
+        "state": 3,
+        "hasBattleReplay": 0,
+        "noCostCnt": 0
+    }
+
+    for name in stageTable['stages'].keys():
+        if name in user['dungeon']['stages']:
+            continue
+        emptyStage['stageId'] = name
+        # if name == "guide_01" or name == "guide_02" or name.startswith('main'):
+        #     emptyStage['state'] = 3
+        # else:
+        #    emptyStage['state'] = 0
+        user['dungeon']['stages'][str(name)] = copy.deepcopy(emptyStage)
+
+    locked = {
+        "locked": 1,
+        "open": 1
+    }
+    for name in retroTable['zoneToRetro'].values():
+        if name in user['retro']['block']:
+            continue
+        user['retro']['block'][name] = locked
+
+    return user
+
+
 @route('/u8/pay/getAllProductList', method='POST')
 def get_products():
     logger.info("Hit /u8/pay/getAllProductList", request.environ.get('HTTP_X_FORWARDED_FOR'))
@@ -36,6 +75,8 @@ def account_syncData():
     if user is None:
         return json.loads('{"result":1}')
 
+    user = complete_serverData(user)
+
     Ts = int(time.time())
 
     medium = file.readFile('./template/syncData.json')
@@ -52,6 +93,7 @@ def account_syncData():
     medium['user']['building'] = user['building']
     medium['user']['inventory'] = user['inventory']
     medium['user']['storyreview'] = user['storyreview']
+    medium['user']['retro'] = user['retro']
 
     # Update all timestamps
     medium['user']['pushFlags']['status'] = Ts
@@ -65,15 +107,14 @@ def account_syncData():
     medium['user']['checkIn']['canCheckIn'] = 0
 
     # Experiment zone
-    # inventoryList = file.readFile('./serverData/item_table.json')
-    # for i in inventoryList['items']:
-    # medium['user']['inventory'][i] = 1
+    # medium['user']['activity'] = dd['user']['activity']
 
     # Update db
     api.update(user, {'status': medium['user']['status']})
     api.update(user, {'pushFlags': medium['user']['pushFlags']})
+    api.update(user, {'retro': medium['user']['retro']})
 
-    return json.dumps(medium, ensure_ascii=False)
+    return medium
 
 
 @route('/account/syncStatus', method='POST')
