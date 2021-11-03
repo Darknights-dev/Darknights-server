@@ -8,6 +8,39 @@ import json
 from utils import api, err, logger
 
 
+@route('/background/setBackground', method='POST')
+def setBackground():
+    logger.info('/background/setBackground', request.environ.get('HTTP_X_FORWARDED_FOR'))
+    try:
+        secret = request.get_header("secret")
+        data = json.loads(request.body.read())
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    if secret is None:
+        return json.loads('{"result":1}')
+
+    user = api.getUserBySecret(secret)
+
+    api.update(user, {'background.selected': data['bgID']})
+
+    resp = """
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "background": {
+                "selected": "bg_rhodes_day"
+            }
+        }
+    }
+}
+"""
+    medium = json.loads(resp)
+    medium["playerDataDelta"]["modified"]["background"]["selected"] = data['bgID']
+
+    return medium
+
 @route('/user/changeSecretary', method='POST')
 def user_changeSecretary():
     return None
