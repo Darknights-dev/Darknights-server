@@ -105,9 +105,11 @@ def user_register():
             "guaranteed": 50,  # 保底数量(修改为0时无保底)
             "total": 0,  # 总抽取数量
             "save": 0  # 保底统计
+        },
+        "background":{
+            "selected": "bg_rhodes_day"
         }
     }
-
     userData['status']['lastOnlineTs'] = registerTs
     userData['status']['lastRefreshTs'] = registerTs
     userData['status']['registerTs'] = registerTs

@@ -106,6 +106,13 @@ def account_syncData():
     # Checkin
     medium['user']['checkIn']['canCheckIn'] = 0
 
+    #background
+    try:
+        medium['user']['background']['selected'] = user['background']['selected']
+    except BaseException:
+        api.update(user, {'background.selected': "bg_rhodes_day"})
+        medium['user']['background']['selected'] = "bg_rhodes_day"
+
     # Experiment zone
     # medium['user']['activity'] = dd['user']['activity']
 
