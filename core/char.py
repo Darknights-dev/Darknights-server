@@ -15,6 +15,7 @@ with open('./serverData/gamedata_const.json', 'r', encoding='utf-8') as f:
 with open('./serverData/character_table.json', 'r', encoding='utf-8') as f:
     characterTable = json.loads(f.read())
 
+
 @route('/charBuild/boostPotential', method='POST')
 def charBuild_boostPotential():
     logger.info('Hit /charBuild/boostPotential',
@@ -104,7 +105,7 @@ def charBuild_upgradeChar():
     characterExpMap = constConfig['characterExpMap'][Phase]
     characterUpgradeCostMap = constConfig['characterUpgradeCostMap'][Phase]
     for i in range(curLevel - 1, len(characterExpMap)):
-        if(expCost + characterExpMap[i] > expNow or characterExpMap[i] == -1):
+        if (expCost + characterExpMap[i] > expNow or characterExpMap[i] == -1):
             levelNew = i + 1
             expNew = expNow - expCost
             break
@@ -115,31 +116,31 @@ def charBuild_upgradeChar():
     if levelNew >= maxLevel:
         levelNew = maxLevel
         expNew = 0
-    
+
     gold = user['status']['gold']
     goldCost = 0
     if curLevel == levelNew:
-        goldCost = round(((expNew - curExp) 
-                          / characterExpMap[curLevel - 1]) 
-                          * characterUpgradeCostMap[curLevel - 1]) 
+        goldCost = round(((expNew - curExp)
+                          / characterExpMap[curLevel - 1])
+                         * characterUpgradeCostMap[curLevel - 1])
     elif levelNew == curLevel + 1:
-        goldCost = round((((characterExpMap[curLevel - 1] - curExp) 
-                            / characterExpMap[curLevel - 1]) 
-                            * characterUpgradeCostMap[curLevel - 1])
-                            +(( expNew / characterExpMap[levelNew - 1]) 
+        goldCost = round((((characterExpMap[curLevel - 1] - curExp)
+                           / characterExpMap[curLevel - 1])
+                          * characterUpgradeCostMap[curLevel - 1])
+                         + ((expNew / characterExpMap[levelNew - 1])
                             * characterUpgradeCostMap[levelNew - 1 if levelNew - 1 < 89 else levelNew - 2]))
-                            # Because expNew must be 0 when upgrade to 90.
-                            # characterExpMap has an extra -1 in the end,
-                            # but characterUpgradeCostMap does not.
-                            # No better idea.
+        # Because expNew must be 0 when upgrade to 90.
+        # characterExpMap has an extra -1 in the end,
+        # but characterUpgradeCostMap does not.
+        # No better idea.
     else:
         for i in range(curLevel + 1 - 1, levelNew - 1 - 1 + 1):
             goldCost = goldCost + characterUpgradeCostMap[i]
-        goldCost = goldCost+ round((((characterExpMap[curLevel - 1] - curExp) 
-                                    / characterExpMap[curLevel - 1]) 
-                                    * characterUpgradeCostMap[curLevel - 1])
-                                    +(( expNew / characterExpMap[levelNew - 1])
-                                    * characterUpgradeCostMap[levelNew - 1 if levelNew - 1 < 89 else levelNew - 2]))
+        goldCost = goldCost + round((((characterExpMap[curLevel - 1] - curExp)
+                                      / characterExpMap[curLevel - 1])
+                                     * characterUpgradeCostMap[curLevel - 1])
+                                    + ((expNew / characterExpMap[levelNew - 1])
+                                       * characterUpgradeCostMap[levelNew - 1 if levelNew - 1 < 89 else levelNew - 2]))
 
     gold = gold - goldCost
 
@@ -152,7 +153,6 @@ def charBuild_upgradeChar():
             },
             "troop": {
                 "chars": {
-
                 }
             },
             "status": {
@@ -169,7 +169,7 @@ def charBuild_upgradeChar():
                       'status.gold': gold})
     for i in data['expMats']:
         medium['playerDataDelta']['modified']['inventory'][i['id']] = user['inventory'][i['id']] - i['count']
-        api.update(user,{'inventory.' + i['id']:user['inventory'][i['id']] - i['count']})
+        api.update(user, {'inventory.' + i['id']: user['inventory'][i['id']] - i['count']})
     medium['playerDataDelta']['modified']['troop']['chars'] = {
         str(data['charInstId']): {'exp': expNew, 'level': levelNew}}
     medium['playerDataDelta']['modified']['status']['gold'] = gold
@@ -178,8 +178,7 @@ def charBuild_upgradeChar():
 
 @route('/charBuild/changeCharSkin', method='POST')
 def charBuild_changeCharSkin():
-    logger.info('Hit /charBuild/changeCharSkin',
-                request.environ.get('HTTP_X_FORWARDED_FOR'))
+    logger.info('Hit /charBuild/changeCharSkin', request.environ.get('HTTP_X_FORWARDED_FOR'))
 
     try:
         secret = request.get_header("secret")
@@ -212,14 +211,94 @@ def charBuild_changeCharSkin():
 }
     """
     medium = json.loads(resp)
-    medium['playerDataDelta']['modified']['troop']['chars'][str(charInstId)] = {
-        "skin": skinId}
+    medium['playerDataDelta']['modified']['troop']['chars'][str(charInstId)] = {"skin": skinId}
     return medium
 
 
 @route('/charBuild/evolveChar', method='POST')
 def charBuild_evolveChar():
     return
+
+
+@route('/char/changeMarkStar', method='POST')
+def char_changeMarkStar():
+    logger.info('Hit /char/changeMarkStar', request.environ.get('HTTP_X_FORWARDED_FOR'))
+
+    try:
+        secret = request.get_header("secret")
+        data = json.loads(request.body.read())
+        charId = list(data['set'].keys())[0]
+        marked = data['set'][charId]
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    if secret is None:
+        return json.loads('{"result":1}')
+    user = api.getUserBySecret(secret)
+
+    if user is None:
+        return json.loads('{"result":1}')
+
+    try:
+        charInstId = user['dexNav']['character'][charId]['charInstId']
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    resp = """
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "troop": {
+                "chars": {
+                }
+            }
+        }
+    }
+}
+    """
+    medium = json.loads(resp)
+    medium['playerDataDelta']['modified']['troop']['chars'][str(charInstId)] = {"starMark": marked}
+    api.update(user, {'troop.chars.' + str(charInstId) + '.starMark': marked})
+    return medium
+
+
+@route('/charBuild/setCharVoiceLan', method='POST')
+def charBuild_setCharVoiceLan():
+    logger.info('Hit /charBuild/setCharVoiceLan', request.environ.get('HTTP_X_FORWARDED_FOR'))
+
+    try:
+        secret = request.get_header("secret")
+        data = json.loads(request.body.read())
+        charInstId = data['charInstId']
+        voiceLan = data['voiceLan']
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    if secret is None:
+        return json.loads('{"result":1}')
+    user = api.getUserBySecret(secret)
+
+    if user is None:
+        return json.loads('{"result":1}')
+
+    resp = """
+    {
+        "playerDataDelta": {
+            "deleted": {},
+            "modified": {
+                "troop": {
+                    "chars": {
+                    }
+                }
+            }
+        }
+    }
+        """
+    medium = json.loads(resp)
+    medium['playerDataDelta']['modified']['troop']['chars'][str(charInstId)] = {"voiceLan": voiceLan}
+    api.update(user, {'troop.chars.' + str(charInstId) + '.voiceLan': voiceLan})
+    return medium
 
 
 @route('/charBuild/batchSetCharVoiceLan', method='POST')

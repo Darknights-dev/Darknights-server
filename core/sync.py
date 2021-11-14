@@ -17,6 +17,8 @@ def complete_serverData(user):
     stageTable = file.readFile('./serverData/stage_table.json')
     retroTable = file.readFile('./serverData/retro_table.json')
 
+    # Construct stages
+
     emptyStage = {
         "stageId": "",
         "completeTimes": 0,
@@ -37,6 +39,7 @@ def complete_serverData(user):
         #    emptyStage['state'] = 0
         user['dungeon']['stages'][str(name)] = copy.deepcopy(emptyStage)
 
+    # Construct retro
     locked = {
         "locked": 1,
         "open": 1
@@ -46,6 +49,11 @@ def complete_serverData(user):
             continue
         user['retro']['block'][name] = locked
 
+    # Background
+    if not 'background' in user:
+        user['background'] = {'selected': 'bg_rhodes_day'}
+
+    # Voice
     return user
 
 
@@ -106,12 +114,8 @@ def account_syncData():
     # Checkin
     medium['user']['checkIn']['canCheckIn'] = 0
 
-    #background
-    try:
-        medium['user']['background']['selected'] = user['background']['selected']
-    except BaseException:
-        api.update(user, {'background.selected': "bg_rhodes_day"})
-        medium['user']['background']['selected'] = "bg_rhodes_day"
+    # background
+    medium['user']['background']['selected'] = user['background']['selected']
 
     # Experiment zone
     # medium['user']['activity'] = dd['user']['activity']
