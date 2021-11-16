@@ -41,6 +41,7 @@ def setBackground():
 
     return medium
 
+
 @route('/user/changeSecretary', method='POST')
 def user_changeSecretary():
     return None

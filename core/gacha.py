@@ -273,7 +273,7 @@ def gacha_advancedGacha():
     medium['charGet']['isNew'] = isNew
     medium['charGet']['itemGet'].append({
         'count': 1,
-        'id': "p_" + charGet,
+        'id': "p_" + charGet,  # May cause bugs in the future
         'type': 'MATERIAL'
     })
 
