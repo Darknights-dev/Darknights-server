@@ -6,7 +6,7 @@ from bottle import *
 import json
 import hashlib
 
-from utils import logger, rnd, api, err
+from utils import logger, api, err, encryption
 
 
 # userLogin(auth) -> getToken -> accountLogin
@@ -29,7 +29,7 @@ def user_login():
     ori = hashlib.md5(passwd.encode()).hexdigest()
     if ori == user['password']:
         # success
-        token = rnd.get_rand_str(32)
+        token = encryption.get_rand_str(32)
         api.update(user, {'token': token})
         logger.info("userLogin Succeed," + user['account'], request.environ.get('HTTP_X_FORWARDED_FOR'))
     else:
@@ -52,7 +52,7 @@ def user_login():
     medium = json.loads(resp)
     medium['token'] = token
     medium['uid'] = user['uid']
-    medium['issuedAt'] = int(time.time())
+    medium['issuedAt'] = api.getTs()
     return medium
 
 
@@ -84,7 +84,7 @@ def get_token():
     """
     medium = json.loads(resp)
     medium['channelUid'] = medium['uid'] = user['uid']
-    token_24 = rnd.get_rand_str(24)
+    token_24 = encryption.get_rand_str(24)
     api.update(user, {'token_24': token_24})
     medium['token'] = token_24
     return medium
@@ -116,7 +116,7 @@ def account_login():
     """
     medium = json.loads(resp)
     medium['uid'] = uid
-    secret = rnd.get_rand_str(32)
+    secret = encryption.get_rand_str(32)
     medium['secret'] = secret
     api.update(user, {'secret': secret})
     return medium

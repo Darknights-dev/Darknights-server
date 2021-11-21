@@ -6,7 +6,7 @@ from bottle import *
 import json
 import hashlib
 
-from utils import logger, rnd, file, err, api
+from utils import logger, encryption, file, err, api
 
 
 @route('/user/register', method='POST')
@@ -21,12 +21,12 @@ def user_register():
     except BaseException:
         return json.loads(err.badRequestFormat)
 
-    registerTs = int(time.time())
+    registerTs = api.getTs()
 
     account = data['account']
     passwd = data['password'] + 'kaltsit'
     passwd_hash = hashlib.md5(passwd.encode()).hexdigest()
-    token = rnd.get_rand_str(32)
+    token = encryption.get_rand_str(32)
 
     logger.info("Read Initial User Data From Files")
 
@@ -58,6 +58,7 @@ def user_register():
         "uid": uid,
         "password": passwd_hash,
         "token": token,
+
         # Beginning of original user data
         "status": initial_status,
         "dungeon": {
@@ -92,13 +93,18 @@ def user_register():
             }
         },
         "retro": {
-            'coin': 999,
-            'supplement': 1,
-            'block': {},
-            'lst': -1,
-            'nst': -1,
-            'trial': {}
+            "coin": 999,
+            "supplement": 1,
+            "block": {},
+            "lst": -1,
+            "nst": -1,
+            "trial": {}
         },
+        "background": {
+            "selected": "bg_rhodes_day",
+            "bgs": {}
+        },
+
         # End of original user data
         "battleReplay": {},
         "gachaStatus": {
@@ -106,17 +112,12 @@ def user_register():
             "total": 0,  # 总抽取数量
             "save": 0  # 保底统计
         },
-        "background":{
-            "selected": "bg_rhodes_day"
-        }
+        "jobQueue": {}
     }
+
     userData['status']['lastOnlineTs'] = registerTs
     userData['status']['lastRefreshTs'] = registerTs
     userData['status']['registerTs'] = registerTs
-
-    inventoryList = file.readFile('./serverData/item_table.json')
-    for i in inventoryList['items']:
-        userData['inventory'][i] = 99999999
 
     api.addUser(userData)
 

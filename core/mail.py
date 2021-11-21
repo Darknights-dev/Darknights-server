@@ -4,9 +4,8 @@
 
 from bottle import *
 import json
-import time
 
-from utils import logger
+from utils import logger, api
 
 
 @route('/mail/getMetaInfoList', method='POST')
@@ -31,7 +30,7 @@ def mail_getMetaInfoList():
 }
     """
     medium = json.loads(resp)
-    medium['result'][0]['createAt'] = int(time.time())
+    medium['result'][0]['createAt'] = api.getTs()
     return medium
 
 

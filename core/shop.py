@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Description: Shopping System
-import random
 
 from bottle import *
+
 import json
 import copy
-from utils import logger, file
+import time
+
+from utils import logger, file, err, api
 
 null = 'null'
 true = True
@@ -39,7 +41,7 @@ skinTableInit()
 def shop_getSkinGoodList():
     logger.info('Hit /shop/getSkinGoodList', request.environ.get('HTTP_X_FORWARDED_FOR'))
 
-    Ts = int(time.time())
+    Ts = api.getTs()
     defaultSkin = {
         "charId": "",
         "currencyUnit": "DIAMOND",
@@ -72,7 +74,49 @@ def shop_getSkinGoodList():
 
 @route('/shop/buySkinGood', method='POST')
 def shop_buySkinGood():
-    return
+    logger.info('Hit /shop/buySkinGood', request.environ.get('HTTP_X_FORWARDED_FOR'))
+
+    try:
+        secret = request.get_header("secret")
+        data = json.loads(request.body.read())
+        goodId = data['goodId']
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    if secret is None:
+        return err.status1
+
+    user = api.getUserBySecret(secret)
+
+    if user is None:
+        return err.status1
+
+    Ts = api.getTs()
+    skinId = goodId[3:]
+
+    resp = """
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "skin": {
+                "characterSkins": {
+                },
+                "skinTs": {
+                }
+            }
+        }
+    }
+}
+    """
+    medium = json.loads(resp)
+    modify = medium['playerDataDelta']['modified']
+    modify['skin']['characterSkins'] = {skinId: 1}
+    modify['skin']['skinTs'] = {skinId: Ts}
+    # modify['status']['androidDiamond'] = 0
+    api.update(user, {'skin.characterSkins.' + skinId: 1})
+    api.update(user, {'skin.skinTs.' + skinId: Ts})
+    return medium
 
 
 @route('/shop/getCashGoodList', method='POST')

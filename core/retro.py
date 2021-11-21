@@ -4,7 +4,6 @@
 
 from bottle import *
 import json
-import copy
 
 from utils import logger, file, err, api
 

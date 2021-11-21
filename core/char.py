@@ -16,55 +16,6 @@ with open('./serverData/character_table.json', 'r', encoding='utf-8') as f:
     characterTable = json.loads(f.read())
 
 
-@route('/charBuild/boostPotential', method='POST')
-def charBuild_boostPotential():
-    logger.info('Hit /charBuild/boostPotential',
-                request.environ.get('HTTP_X_FORWARDED_FOR'))
-
-    try:
-        secret = request.get_header("secret")
-        data = json.loads(request.body.read())
-        charInstId = data['charInstId']
-        targetRank = data['targetRank']
-    except BaseException:
-        return json.loads(err.badRequestFormat)
-
-    if secret is None:
-        return json.loads('{"result":1}')
-
-    user = api.getUserBySecret(secret)
-
-    if user is None:
-        return json.loads('{"result":1}')
-
-    resp = """
-{
-    "playerDataDelta": {
-        "deleted": {},
-        "modified": {
-            "inventory": {
-                "p_char_187_ccheal": 0
-            },
-            "troop": {
-                "chars": {
-                    "0": {
-                        "potentialRank": 1
-                    }
-                }
-            }
-        }
-    },
-    "result": 1
-}
-    """
-    medium = json.loads(resp)
-    modify = medium['playerDataDelta']['modified']
-    modify['inventory'] = {}
-    modify['troop']['chars'] = json.loads(
-        '{"' + str(charInstId) + '":{"potentialRank":' + str(targetRank) + '}}')
-    return medium
-
-
 @route('/charBuild/upgradeChar', method='POST')
 def charBuild_upgradeChar():
     logger.info('Hit /charBuild/upgradeChar',
@@ -176,6 +127,56 @@ def charBuild_upgradeChar():
     return medium
 
 
+@route('/charBuild/boostPotential', method='POST')
+def charBuild_boostPotential():
+    logger.info('Hit /charBuild/boostPotential', request.environ.get('HTTP_X_FORWARDED_FOR'))
+
+    try:
+        secret = request.get_header("secret")
+        data = json.loads(request.body.read())
+        charInstId = data['charInstId']
+        targetRank = data['targetRank']
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    if secret is None:
+        return err.status1
+
+    user = api.getUserBySecret(secret)
+
+    if user is None:
+        return err.status1
+
+    charId = api.getCharIdByCharInstId(user, charInstId)
+    potentialItem = user['inventory']['p_' + charId]
+
+    if potentialItem < 1:
+        return err.status1
+
+    resp = """
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "inventory": {},
+            "troop": {
+                "chars": {}
+            }
+        }
+    },
+    "result": 1
+}
+    """
+    medium = json.loads(resp)
+    modify = medium['playerDataDelta']['modified']
+    modify['inventory'] = {'p_' + charId: potentialItem - 1}
+    modify['troop']['chars'][str(charInstId)] = {'potentialRank': targetRank}
+
+    api.update(user, {'inventory.p_' + charId: potentialItem - 1})
+    api.update(user, {'troop.chars.' + str(charInstId) + '.potentialRank': targetRank})
+    return medium
+
+
 @route('/charBuild/changeCharSkin', method='POST')
 def charBuild_changeCharSkin():
     logger.info('Hit /charBuild/changeCharSkin', request.environ.get('HTTP_X_FORWARDED_FOR'))
@@ -240,7 +241,7 @@ def char_changeMarkStar():
         return json.loads('{"result":1}')
 
     try:
-        charInstId = user['dexNav']['character'][charId]['charInstId']
+        charInstId = api.getCharInstIdByCharId(user, charId)
     except BaseException:
         return json.loads(err.badRequestFormat)
 

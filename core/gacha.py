@@ -187,7 +187,7 @@ def gacha_advancedGacha():
     charName saved in user['dexNav']['character']
     Do not forget to modify building.
     """
-    Ts = int(time.time())
+    Ts = api.getTs()
 
     curCharInstId = user['troop']['curCharInstId']
     charGet = gachaGetOne(user)
@@ -353,7 +353,7 @@ def gacha_tenAdvancedGacha():
     if user['status']['diamondShard'] - 10 * oneAdvancedGachaCost < 0:
         return json.loads('{"result":1}')
 
-    Ts = int(time.time())
+    Ts = api.getTs()
 
     gachaResultList = []  # gacha result, all chars directly send back
     instIdResult = {}  # save generated char's instId
@@ -499,22 +499,6 @@ def gacha_tenAdvancedGacha():
         modify['building']['chars'][str(newCharInstId)] = newCharBuilding
         modify['troop']['charGroup'][newCharId] = {"favorPoint": 0}
         modify['troop']['chars'][str(newCharInstId)] = newCharList[newChar]
-        """
-                charNew = {
-                    "instId": instId,
-                    "charId": charGet,
-                    "favorPoint": 0,
-                    "potentialRank": 0,
-                    "mainSkillLvl": 1,
-                    "skin": charGet + "#1",
-                    "level": 1,
-                    "exp": 0,
-                    "evolvePhase": 0,
-                    "defaultSkillIndex": 0,
-                    "gainTime": Ts,
-                    "skills": []
-                }
-        """
         api.update(user, {
             'dexNav.character.' + newCharId: {
                 'charInstId': newCharInstId,

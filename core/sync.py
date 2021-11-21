@@ -10,53 +10,6 @@ import copy
 from utils import api, logger, err, file
 
 
-def complete_serverData(user):
-    """
-    Completion of New Data
-    """
-    stageTable = file.readFile('./serverData/stage_table.json')
-    retroTable = file.readFile('./serverData/retro_table.json')
-
-    # Construct stages
-
-    emptyStage = {
-        "stageId": "",
-        "completeTimes": 0,
-        "startTimes": 0,
-        "practiceTimes": 0,
-        "state": 3,
-        "hasBattleReplay": 0,
-        "noCostCnt": 0
-    }
-
-    for name in stageTable['stages'].keys():
-        if name in user['dungeon']['stages']:
-            continue
-        emptyStage['stageId'] = name
-        # if name == "guide_01" or name == "guide_02" or name.startswith('main'):
-        #     emptyStage['state'] = 3
-        # else:
-        #    emptyStage['state'] = 0
-        user['dungeon']['stages'][str(name)] = copy.deepcopy(emptyStage)
-
-    # Construct retro
-    locked = {
-        "locked": 1,
-        "open": 1
-    }
-    for name in retroTable['zoneToRetro'].values():
-        if name in user['retro']['block']:
-            continue
-        user['retro']['block'][name] = locked
-
-    # Background
-    if not 'background' in user:
-        user['background'] = {'selected': 'bg_rhodes_day'}
-
-    # Voice
-    return user
-
-
 @route('/u8/pay/getAllProductList', method='POST')
 def get_products():
     logger.info("Hit /u8/pay/getAllProductList", request.environ.get('HTTP_X_FORWARDED_FOR'))
@@ -75,55 +28,21 @@ def account_syncData():
     except BaseException:
         return json.loads(err.badRequestFormat)
 
-    if secret is None:
-        return json.loads('{"result":1}')
-
     user = api.getUserBySecret(secret)
 
     if user is None:
-        return json.loads('{"result":1}')
+        return err.status1
 
-    user = complete_serverData(user)
-
-    Ts = int(time.time())
-
+    Ts = api.getTs()
+    user = api.completeServerData(user, Ts)
     medium = file.readFile('./template/syncData.json')
-
-    # Load data from db
-    medium['user']['status'] = user['status']
-
-    # No difference between android and ios
-    medium['user']['status']['iosDiamond'] = medium['user']['status']['androidDiamond']
-
-    medium['user']['dungeon'] = user['dungeon']  # Unlocked
-    medium['user']['troop'] = user['troop']
-    medium['user']['dexNav']['character'] = user['dexNav']['character']
-    medium['user']['building'] = user['building']
-    medium['user']['inventory'] = user['inventory']
-    medium['user']['storyreview'] = user['storyreview']
-    medium['user']['retro'] = user['retro']
-
-    # Update all timestamps
-    medium['user']['pushFlags']['status'] = Ts
-    medium['user']['status']['lastOnlineTs'] = Ts
-    medium['user']['status']['lastRefreshTs'] = Ts
-    medium['user']['campaignsV2']['lastRefreshTs'] = Ts
-    medium['user']['event']['building'] = Ts
-    medium['ts'] = Ts
+    medium = api.loadUserData(user, medium)
+    medium = api.updateAllTs(user, medium, Ts)
 
     # Checkin
     medium['user']['checkIn']['canCheckIn'] = 0
 
-    # background
-    medium['user']['background']['selected'] = user['background']['selected']
-
-    # Experiment zone
-    # medium['user']['activity'] = dd['user']['activity']
-
-    # Update db
-    api.update(user, {'status': medium['user']['status']})
-    api.update(user, {'pushFlags': medium['user']['pushFlags']})
-    api.update(user, {'retro': medium['user']['retro']})
+    api.updateUserData(user, medium)
 
     return medium
 
@@ -146,7 +65,7 @@ def account_syncStatus():
     if user is None:
         return json.loads('{"result":1}')
 
-    Ts = int(time.time())
+    Ts = api.getTs()
 
     # totally no idea what 'modules' means
     if data['modules'] == 7:
@@ -179,7 +98,7 @@ def building_sync():
     if user is None:
         return json.loads('{"result":1}')
 
-    Ts = int(time.time())
+    Ts = api.getTs()
 
     resp = """
 {

@@ -4,7 +4,7 @@
 
 from bottle import *
 
-from utils import logger, file
+from utils import logger, file, api
 
 import json
 
@@ -17,7 +17,7 @@ def crisis_getInfo():
     logger.info('Hit /crisis/getInfo', request.environ.get('HTTP_X_FORWARDED_FOR'))
 
     medium = file.readFile('./serverData/crisis.json')
-    medium['ts'] = int(time.time())
+    medium['ts'] = api.getTs()
     return medium
 
 

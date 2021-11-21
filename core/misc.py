@@ -14,6 +14,7 @@ def setBackground():
     try:
         secret = request.get_header("secret")
         data = json.loads(request.body.read())
+        bgID = data['bgID']
     except BaseException:
         return json.loads(err.badRequestFormat)
 
@@ -22,7 +23,7 @@ def setBackground():
 
     user = api.getUserBySecret(secret)
 
-    api.update(user, {'background.selected': data['bgID']})
+    api.update(user, {'background.selected': bgID})
 
     resp = """
 {
@@ -37,14 +38,54 @@ def setBackground():
 }
 """
     medium = json.loads(resp)
-    medium["playerDataDelta"]["modified"]["background"]["selected"] = data['bgID']
+    medium["playerDataDelta"]["modified"]["background"]["selected"] = bgID
 
     return medium
 
 
 @route('/user/changeSecretary', method='POST')
 def user_changeSecretary():
-    return None
+    logger.info('/user/changeSecretary', request.environ.get('HTTP_X_FORWARDED_FOR'))
+    try:
+        secret = request.get_header("secret")
+        data = json.loads(request.body.read())
+        charInstId = data['charInstId']
+        skinId = data['skinId']
+    except BaseException:
+        return json.loads(err.badRequestFormat)
+
+    if secret is None:
+        return json.loads('{"result":1}')
+
+    user = api.getUserBySecret(secret)
+
+    charId = api.getCharIdByCharInstId(user, charInstId)
+
+    resp = """
+{
+    "playerDataDelta": {
+        "deleted": {},
+        "modified": {
+            "status": {
+                "avatar": {
+                    "id": "char_010_chen#2",
+                    "type": "ASSISTANT"
+                },
+                "secretary": "char_010_chen",
+                "secretarySkinId": "char_010_chen#2"
+            }
+        }
+    }
+}
+    """
+    medium = json.loads(resp)
+    modify = medium['playerDataDelta']['modified']
+    modify['status']['avatar'] = {'id': charId, 'type': 'ASSISTANT'}
+    modify['status']['secretary'] = charId
+    modify['status']['secretarySkinId'] = skinId
+    api.update(user, {'status.secretary': charId})
+    api.update(user, {'status.secretarySkinId': skinId})
+    return medium
 
 
 @route('/user/updateAgreement', method='POST')
