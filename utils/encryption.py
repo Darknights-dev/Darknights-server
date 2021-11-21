@@ -4,6 +4,7 @@
 
 import time
 import json
+import string
 import random
 import hashlib
 
@@ -11,6 +12,13 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 
 LOG_TOKEN_KEY = "pM6Umv*^hVQuB6t&{login_time}"
+
+
+def get_rand_str(n):
+    str_list = [
+        random.choice(string.digits + string.ascii_letters) for i in range(n)]
+    random_str = ''.join(str_list)
+    return random_str
 
 
 def get_md5(src):

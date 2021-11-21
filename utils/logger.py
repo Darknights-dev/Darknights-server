@@ -7,17 +7,25 @@ import sys
 import os
 
 
-def info(info, client_ip='localhost'):
-    msg = '[' + str(time.strftime("%Y-%m-%d %H:%M:%S",
-                                  time.localtime())) + '][' + str(client_ip) + '][INFO] ' + info
+def info(inform, client_ip='localhost'):
+    ts = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    dt = time.strftime("%Y-%m-%d", time.localtime())
+    msg = f'[{ts}][{client_ip}][INFO] {inform}'
     print(msg)
-    log_file = open(
-        './logs/log-' +
-        time.strftime(
-            "%Y-%m-%d",
-            time.localtime()) +
-        '.log',
-        'a',
-        encoding='utf-8')
+    log_file = open(f'./logs/log-{dt}.log', 'a', encoding='utf-8')
     log_file.write(msg + '\n')
+    log_file.close()
+
+
+def warn(warning, client_ip='localhost'):
+    ts = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    dt = time.strftime("%Y-%m-%d", time.localtime())
+    msg = f'[{ts}][{client_ip}][INFO] {warning}'
+    print('#'*10)
+    print(msg)
+    print('#'*10)
+    log_file = open(f'./logs/log-{dt}.log', 'a', encoding='utf-8')
+    log_file.write('#'*10)
+    log_file.write(msg + '\n')
+    log_file.write('#'*10)
     log_file.close()
