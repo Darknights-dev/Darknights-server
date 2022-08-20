@@ -38,11 +38,9 @@ def user_login():
 
     resp = """
 {
-    "expiresIn": 604800,
     "isAuthenticate": true,
     "isLatestUserAgreement": true,
     "isMinor": false,
-    "issuedAt": 0,
     "needAuthenticate": false,
     "result": 0,
     "token": "",
@@ -52,7 +50,20 @@ def user_login():
     medium = json.loads(resp)
     medium['token'] = token
     medium['uid'] = user['uid']
-    medium['issuedAt'] = api.getTs()
+#    medium['issuedAt'] = api.getTs()
+    return medium
+
+@route('/user/info/v1/need_cloud_auth', method='POST')
+def user_login():
+    logger.info("Hit /user/info/v1/need_cloud_auth", request.environ.get('HTTP_X_FORWARDED_FOR'))
+    
+    resp = """
+{
+    "msg": "OK",
+    "status": 0
+}
+    """
+    medium = json.loads(resp)
     return medium
 
 
@@ -75,7 +86,7 @@ def get_token():
 {
     "channelUid": "0",
     "error": "",
-    "extension": "{'isGuest':0}",
+    "extension": "{\\"isMinor\\":false,\\"isAuthenticate\\":true}",
     "isGuest": 0,
     "result": 0,
     "token": "",
@@ -139,7 +150,7 @@ def user_auth():
 
     resp = """
 {
-    "isAuthenticate": false,
+    "isAuthenticate": true,
     "isGuest": false,
     "isLatestUserAgreement": true,
     "isMinor": false,
@@ -159,6 +170,21 @@ def verifyAccount():
     resp = """
 {
     "result": 0
+}
+    """
+    return json.loads(resp)
+
+@route('/user/oauth2/v1/grant', method='POST')
+def verifyAccount():
+    logger.info("Hit /user/oauth2/v1/grant", request.environ.get('HTTP_X_FORWARDED_FOR'))
+
+    resp = """
+{
+    "data": {
+        "code": "0"
+    },
+    "msg": "OK",
+    "status": 0
 }
     """
     return json.loads(resp)
